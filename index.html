@@ -850,15 +850,15 @@
             </div>
 
             <div class="form-panel">
-                <form>
+                <form id="contact-form">
                     <div class="form-grid">
-                        <input class="field" placeholder="Name" />
+                        <input class="field" name="from_name" placeholder="Name" />
                         <input class="field" placeholder="Company" />
-                        <input class="field" placeholder="Website" />
-                        <input class="field" placeholder="Email" />
+                        <input class="field" name="website" placeholder="Website" />
+                        <input class="field" name="reply_to" placeholder="Email" />
                     </div>
 
-                    <textarea class="field" rows="6"
+                    <textarea class="field" name="message" rows="6"
                         placeholder="What are you trying to improve (launch, rebuild, migration, performance, conversion, AI visibility)?"></textarea>
 
                     <div class="form-actions">
@@ -869,6 +869,30 @@
             </div>
         </div>
     </section>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script>
+        emailjs.init("eAEWqbWGBPqID5fw-"
+
+const SERVICE_ID = "service_53rotdr";
+        const TEMPLATE_ID = "template_oas5l2v";
+
+        const form = document.getElementById("contact-form");
+
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form)
+                .then(function () {
+                    alert("Sent!");
+                    form.reset();
+                })
+                .catch(function (error) {
+                    alert("Not sent. Check Console.");
+                    console.log(error);
+                });
+        });
+    </script>
 </body>
 
 </html>
