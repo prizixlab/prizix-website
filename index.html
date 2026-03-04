@@ -854,11 +854,11 @@
                 <form id="contact-form">
 
                     <div class="form-grid">
-                        <input type="text" class="field" name="from_name" placeholder="Name" required />
-                        <input type="text" class="field" name="company" placeholder="Company" />
-                        <input type="text" class="field" name="website" placeholder="Website" />
-                        <input type="email" class="field" name="from_email" placeholder="Email" required />
-                        <input type="hidden" name="reply_to" />
+                        <input type="text" class="field" name="from_name" placeholder="Name">
+                        <input type="text" class="field" name="company" placeholder="Company">
+                        <input type="text" class="field" name="website" placeholder="Website">
+                        <input type="email" class="field" name="reply_to" placeholder="Email">
+
                     </div>
 
                     <textarea class="field" name="message" rows="6"
@@ -895,7 +895,7 @@
                 e.preventDefault();
 
                 // Copy from_email into reply_to so BOTH exist (fixes 400 from template mismatches)
-                const fromEmailEl = form.querySelector('[name="from_email"]');
+                const fromEmailEl = form.querySelector('[name="reply_to"]');
                 const replyToEl = form.querySelector('[name="reply_to"]');
                 if (fromEmailEl && replyToEl) replyToEl.value = fromEmailEl.value;
 
