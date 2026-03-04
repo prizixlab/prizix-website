@@ -853,7 +853,7 @@
                 <form id="contact-form">
                     <div class="form-grid">
                         <input class="field" name="from_name" placeholder="Name" />
-                        <input class="field" placeholder="Company" />
+                        <input class="field" name="company" placeholder="Company" />
                         <input class="field" name="website" placeholder="Website" />
                         <input class="field" name="reply_to" placeholder="Email" />
                     </div>
@@ -872,10 +872,10 @@
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
     <script>
-        emailjs.init("eAEWqbWGBPqID5fw-"
+        emailjs.init({ publicKey: "eAEwqbWGBPqID5fw--" });
 
-const SERVICE_ID = "service_53rotdr";
-        const TEMPLATE_ID = "template_oas5l2v";
+        const SERVICE_ID = "service_53rotdr";
+        const TEMPLATE_ID = "template_oas5l2v"; // Contact Us (to you)
 
         const form = document.getElementById("contact-form");
 
