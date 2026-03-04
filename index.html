@@ -841,57 +841,88 @@
     <!-- CONTACT (only ONCE — your pasted code had it twice) -->
     <section class="section" id="contact">
         <div class="container">
+
             <div class="section-head">
-                <h2>Let’s talk</h2>
+                <h2>Contact Us</h2>
                 <p class="section-lead">
-                    Tell us what you’re building and what needs to improve. We’ll reply with the next step and a clean
+                    Tell us what you’re building and what needs to improve. We'll reply with the next step and a clean
                     plan.
                 </p>
             </div>
 
             <div class="form-panel">
                 <form id="contact-form">
+
                     <div class="form-grid">
-                        <input class="field" name="from_name" placeholder="Name" />
-                        <input class="field" name="company" placeholder="Company" />
-                        <input class="field" name="website" placeholder="Website" />
-                        <input class="field" name="reply_to" placeholder="Email" />
+                        <input type="text" class="field" name="from_name" placeholder="Name" required />
+                        <input type="text" class="field" name="company" placeholder="Company" />
+                        <input type="text" class="field" name="website" placeholder="Website" />
+                        <input type="email" class="field" name="from_email" placeholder="Email" required />
+                        <input type="hidden" name="reply_to" />
                     </div>
 
                     <textarea class="field" name="message" rows="6"
-                        placeholder="What are you trying to improve (launch, rebuild, migration, performance, conversion, AI visibility)?"></textarea>
+                        placeholder="What are you trying to improve (launch, rebuild, migration, performance, conversion...)"
+                        required></textarea>
 
                     <div class="form-actions">
-                        <button type="submit" class="btn primary">Send</button>
-                        <div class="form-note">You’ll get a reply with a recommended path (and what to ignore).</div>
+                        <button id="contact-submit" type="submit" class="btn primary">Send</button>
+                        <div class="form-note">
+                            You’ll get a reply with a recommended path (and what to ignore).
+                        </div>
                     </div>
+
                 </form>
             </div>
+
         </div>
     </section>
+
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
     <script>
-        emailjs.init({ publicKey: "eAEwqbWGBPqID5fw--" });
+        (function () {
+            const PUBLIC_KEY = "eAEwqbWGBPqID5fw-";
+            const SERVICE_ID = "service_53rotdr";
+            const TEMPLATE_ID = "template_oas5l2v";
 
-        const SERVICE_ID = "service_53rotdr";
-        const TEMPLATE_ID = "template_oas5l2v"; // Contact Us (to you)
+            emailjs.init({ publicKey: PUBLIC_KEY });
 
-        const form = document.getElementById("contact-form");
+            const form = document.getElementById("contact-form");
+            const btn = document.getElementById("contact-submit");
 
-        form.addEventListener("submit", function (e) {
-            e.preventDefault();
+            form.addEventListener("submit", function (e) {
+                e.preventDefault();
 
-            emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form)
-                .then(function () {
-                    alert("Sent!");
-                    form.reset();
-                })
-                .catch(function (error) {
-                    alert("Not sent. Check Console.");
-                    console.log(error);
-                });
-        });
+                // Copy from_email into reply_to so BOTH exist (fixes 400 from template mismatches)
+                const fromEmailEl = form.querySelector('[name="from_email"]');
+                const replyToEl = form.querySelector('[name="reply_to"]');
+                if (fromEmailEl && replyToEl) replyToEl.value = fromEmailEl.value;
+
+                btn.disabled = true;
+                const originalText = btn.textContent;
+                btn.textContent = "Sending...";
+
+                emailjs
+                    .sendForm(SERVICE_ID, TEMPLATE_ID, form)
+                    .then(function (result) {
+                        console.log("EmailJS success:", result);
+                        alert("Sent!");
+                        form.reset();
+                    })
+                    .catch(function (error) {
+                        console.error("EmailJS error:", error);
+                        alert("Not sent. Check Console.");
+
+                        // This is the IMPORTANT part: it usually reveals the exact missing variable
+                        if (error && error.text) console.error("EmailJS error.text:", error.text);
+                    })
+                    .finally(function () {
+                        btn.disabled = false;
+                        btn.textContent = originalText;
+                    });
+            });
+        })();
     </script>
 </body>
 
