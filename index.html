@@ -895,9 +895,7 @@
                 e.preventDefault();
 
                 // Copy from_email into reply_to so BOTH exist (fixes 400 from template mismatches)
-                const fromEmailEl = form.querySelector('[name="reply_to"]');
-                const replyToEl = form.querySelector('[name="reply_to"]');
-                if (fromEmailEl && replyToEl) replyToEl.value = fromEmailEl.value;
+
 
                 btn.disabled = true;
                 const originalText = btn.textContent;
