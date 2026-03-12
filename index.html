@@ -429,11 +429,26 @@
         }
 /* PORTFOLIO */
 
+.portfolio-swipe-hint {
+  display: none;
+  margin-top: 8px;
+  font-size: 12px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, .62);
+}
+
 .portfolio-carousel {
-  display: flex;
-  gap: 24px;
-  overflow-x: auto;
-  padding-top: 20px;
+display: flex;
+gap: 24px;
+overflow-x: auto;
+padding: 20px 24px 0;
+margin: 0 -24px;
+scroll-snap-type: x mandatory;
+scroll-behavior: smooth;
+-webkit-overflow-scrolling: touch;
+mask-image: linear-gradient(to right, transparent 0, black 20px, black calc(100% - 20px), transparent 100%);
+-webkit-mask-image: linear-gradient(to right, transparent 0, black 20px, black calc(100% - 20px), transparent 100%);
 }
 
 .portfolio-carousel::-webkit-scrollbar {
@@ -441,16 +456,76 @@
 }
 
 .portfolio-item {
-  min-width: 420px;
-  border-radius: 14px;
+  flex: 0 0 min(78vw, 520px);
+  scroll-snap-align: start;
+  border-radius: 18px;
   overflow: hidden;
   background: rgba(255,255,255,0.04);
   border: 1px solid rgba(255,255,255,0.08);
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 10px 30px rgba(0,0,0,.12);
+  transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 46px rgba(0,0,0,.18);
+  border-color: rgba(255,255,255,0.18);
 }
 
 .portfolio-item img {
   width: 100%;
   display: block;
+  transition: transform .35s ease;
+}
+
+.portfolio-item:hover img {
+  transform: scale(1.02);
+}
+
+.portfolio-meta {
+  padding: 16px 18px 18px;
+}
+
+.portfolio-meta h3 {
+  margin: 0 0 6px;
+  font-size: 18px;
+  line-height: 1.25;
+  color: #fff;
+}
+
+.portfolio-meta p {
+  margin: 0;
+  font-size: 14px;
+  color: rgba(255, 255, 255, .68);
+}
+
+@media (max-width: 768px) {
+  .portfolio-swipe-hint {
+    display: block;
+  }
+
+  .portfolio-carousel {
+    gap: 16px;
+    padding-top: 16px;
+  }
+
+  .portfolio-item {
+    flex: 0 0 86%;
+  }
+
+  .portfolio-meta {
+    padding: 14px 14px 16px;
+  }
+
+  .portfolio-meta h3 {
+    font-size: 16px;
+  }
+
+  .portfolio-meta p {
+    font-size: 13px;
+  }
 }
 
 
@@ -868,34 +943,57 @@
 <section class="section" id="portfolio">
   <div class="container">
 
-    <div class="section-head">
-      <h2>Selected Work</h2>
-      <p class="section-lead">
-        Shopify builds, redesigns, and migrations focused on performance, UX, and conversion.
-      </p>
-    </div>
+  <div class="section-head">
+<h2>Selected Work</h2>
+<p class="portfolio-swipe-hint">Swipe to explore →</p>
+<p class="section-lead">
+Shopify builds, redesigns, and migrations focused on performance, UX, and conversion.
+</p>
+</div>
 
     <div class="portfolio-carousel">
 
-      <div class="portfolio-item">
-        <img src="beistravel-homepage-portfolio.png" alt="Beis Travel Homepage">
-      </div>
+<a class="portfolio-item" href="https://stengrossen.se/" target="_blank" rel="noopener noreferrer">
+<img src="stengrossen-homepage-portfolio.png" alt="Stengrossen Homepage">
+<div class="portfolio-meta">
+<h3>Stengrossen</h3>
+<p>Custom Shopify storefront build</p>
+</div>
+</a>
 
-      <div class="portfolio-item">
-        <img src="gardenersdream-homepage-portfolio.png" alt="Gardeners Dream Homepage">
-      </div>
+<a class="portfolio-item" href="https://jshealthvitamins.com/" target="_blank" rel="noopener noreferrer">
+<img src="jshealth-homepage-portfolio.png" alt="JSHealth Vitamins Homepage">
+<div class="portfolio-meta">
+<h3>JSHealth Vitamins</h3>
+<p>Prestige theme UX customization</p>
+</div>
+</a>
 
-      <div class="portfolio-item">
-        <img src="jshealth-homepage-portfolio.png" alt="JS Health Homepage">
-      </div>
+<a class="portfolio-item" href="https://beistravel.com/" target="_blank" rel="noopener noreferrer">
+<img src="beistravel-homepage-portfolio.png" alt="BÉIS Travel Homepage">
+<div class="portfolio-meta">
+<h3>BÉIS Travel</h3>
+<p>Shopify UX rebuild</p>
+</div>
+</a>
 
-      <div class="portfolio-item">
-        <img src="stengrossen-homepage-portfolio.png" alt="Sten Grossen Homepage">
-      </div>
+<a class="portfolio-item" href="https://www.gardenersdream.co.uk/" target="_blank" rel="noopener noreferrer">
+<img src="gardenersdream-homepage-portfolio.png" alt="Gardeners Dream Homepage">
+<div class="portfolio-meta">
+<h3>Gardeners Dream</h3>
+<p>Catalog UX optimization</p>
+</div>
+</a>
 
-      <div class="portfolio-item">
-        <img src="strongcell-homepage-portfolio.png" alt="StrongCell Homepage">
-      </div>
+<a class="portfolio-item" href="https://strongcell.com/" target="_blank" rel="noopener noreferrer">
+<img src="strongcell-homepage-portfolio.png" alt="StrongCell Homepage">
+<div class="portfolio-meta">
+<h3>StrongCell</h3>
+<p>Subscription storefront</p>
+</div>
+</a>
+
+</div>
 
     </div>
 
