@@ -427,8 +427,35 @@
             line-height: 1.7;
             letter-spacing: 0.005em;
         }
+/* PORTFOLIO */
 
-        /* CONTACT */
+.portfolio-carousel {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  padding-top: 20px;
+}
+
+.portfolio-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.portfolio-item {
+  min-width: 420px;
+  border-radius: 14px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.portfolio-item img {
+  width: 100%;
+  display: block;
+}
+
+
+/* CONTACT */
+
         .form-panel {
             border-radius: var(--r-lg);
             border: 1px solid rgba(255, 255, 255, .16);
@@ -837,7 +864,43 @@
             </div>
         </div>
     </section>
+<!-- PORTFOLIO -->
+<section class="section" id="portfolio">
+  <div class="container">
 
+    <div class="section-head">
+      <h2>Selected Work</h2>
+      <p class="section-lead">
+        Shopify builds, redesigns, and migrations focused on performance, UX, and conversion.
+      </p>
+    </div>
+
+    <div class="portfolio-carousel">
+
+      <div class="portfolio-item">
+        <img src="beistravel-homepage-portfolio.png" alt="Beis Travel Homepage">
+      </div>
+
+      <div class="portfolio-item">
+        <img src="gardenersdream-homepage-portfolio.png" alt="Gardeners Dream Homepage">
+      </div>
+
+      <div class="portfolio-item">
+        <img src="jshealth-homepage-portfolio.png" alt="JS Health Homepage">
+      </div>
+
+      <div class="portfolio-item">
+        <img src="stengrossen-homepage-portfolio.png" alt="Sten Grossen Homepage">
+      </div>
+
+      <div class="portfolio-item">
+        <img src="strongcell-homepage-portfolio.png" alt="StrongCell Homepage">
+      </div>
+
+    </div>
+
+  </div>
+</section>
     <!-- CONTACT (only ONCE — your pasted code had it twice) -->
     <section class="section" id="contact">
         <div class="container">
