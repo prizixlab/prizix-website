@@ -4,47 +4,46 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PRIZIX — E-Commerce Engineering</title>
+    <title>PRIZIX - Online Presence and Business Improvements</title>
     <meta name="description"
-        content="PRIZIX designs and engineers scalable Shopify systems — for new brands, growing stores, and businesses migrating from WooCommerce, Magento, or custom platforms." />
+        content="PRIZIX helps businesses create better customer experiences through websites, ecommerce, and practical business improvements." />
 
     <style>
         :root {
-            /* LIGHTER background (you asked), still premium */
-            --bg0: #17223a;
-            --bg1: #1d2c4a;
-            --panel: rgba(255, 255, 255, .065);
-            --panel2: rgba(255, 255, 255, .085);
-            --border: rgba(255, 255, 255, .16);
-            --text: rgba(255, 255, 255, .92);
-            --muted: rgba(255, 255, 255, .72);
-            --muted2: rgba(255, 255, 255, .62);
-            --blue: #4ea1ff;
-            --violet: #8b7bff;
-            --shadow: 0 18px 60px rgba(0, 0, 0, .28);
-            --r-xl: 22px;
-            --r-lg: 18px;
+            --bg: #FEFDFB;
+            --surface: #ffffff;
+            --surface-alt: #F7F3EF;
+            --mist: #FCFBF8;
+            --ink: #15191d;
+            --muted: #655f5a;
+            --soft: #93887f;
+            --line: #e8e1dc;
+            --dark: #2a211d;
+            --dark-muted: #73675f;
+            --accent: #8C5138;
+            --accent-2: #9B6043;
+            --accent-soft: #BA8568;
+            --shadow: 0 18px 48px rgba(58, 38, 28, .12);
+            --r-xl: 18px;
+            --r-lg: 12px;
+            --r-md: 9px;
         }
 
         * {
             box-sizing: border-box
         }
 
-        html,
-        body {
-            height: 100%
+        html {
+            scroll-behavior: smooth
         }
 
         body {
             margin: 0;
-            color: var(--text);
+            color: var(--ink);
             font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Helvetica Neue", Helvetica, sans-serif;
-            letter-spacing: -0.01em;
             background:
-                radial-gradient(1100px 750px at 14% 10%, rgba(78, 161, 255, .20), transparent 56%),
-                radial-gradient(1000px 700px at 88% 0%, rgba(139, 123, 255, .18), transparent 58%),
-                radial-gradient(900px 650px at 60% 86%, rgba(255, 255, 255, .06), transparent 62%),
-                linear-gradient(180deg, var(--bg0), var(--bg1));
+                linear-gradient(180deg, rgba(252, 251, 248, .86), rgba(254, 253, 251, 0) 34%),
+                var(--bg);
         }
 
         a {
@@ -53,70 +52,65 @@
         }
 
         .container {
-            width: min(1180px, calc(100% - 56px));
+            width: min(1160px, calc(100% - 48px));
             margin: 0 auto
         }
 
-        .nowrap {
-            white-space: nowrap
-        }
-
-        /* NAV */
         .nav {
             position: sticky;
             top: 0;
             z-index: 50;
+            border-bottom: 1px solid rgba(21, 25, 29, .08);
+            background: rgba(254, 253, 251, .92);
             backdrop-filter: blur(14px);
-            background: linear-gradient(180deg, rgba(10, 16, 28, .60), rgba(10, 16, 28, .26));
-            border-bottom: 1px solid rgba(255, 255, 255, .10);
         }
 
         .nav-inner {
             display: flex;
             align-items: center;
             justify-content: space-between;
+            gap: 22px;
             padding: 16px 0;
-            gap: 18px;
         }
 
         .brand {
             display: flex;
             align-items: center;
-            gap: 10px;
-            font-weight: 850;
-            letter-spacing: .14em;
+            gap: 11px;
             font-size: 18px;
+            font-weight: 900;
+            letter-spacing: .12em;
         }
 
         .brand-dot {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background: radial-gradient(circle at 30% 30%, #fff, rgba(255, 255, 255, .25));
-            box-shadow: 0 0 0 6px rgba(78, 161, 255, .14);
+            width: 18px;
+            height: 18px;
+            border-radius: 5px;
+            background:
+                linear-gradient(135deg, var(--accent), var(--accent-2));
         }
 
         .nav-links {
             display: flex;
-            gap: 26px;
+            gap: 8px;
             align-items: center;
-            color: rgba(255, 255, 255, .78);
-            font-size: 16px;
+            color: var(--muted);
+            font-size: 15px;
+            font-weight: 700;
         }
 
         .nav-links a {
-            padding: 8px 10px;
-            border-radius: 12px
+            padding: 9px 12px;
+            border-radius: 999px;
         }
 
         .nav-links a:hover {
-            background: rgba(255, 255, 255, .06);
-            color: rgba(255, 255, 255, .92)
+            background: rgba(127, 75, 54, .08);
+            color: var(--ink);
         }
 
         .nav-cta {
             display: flex;
-            gap: 10px;
             align-items: center
         }
 
@@ -124,217 +118,704 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            height: 46px;
+            min-height: 46px;
             padding: 0 18px;
-            border-radius: 999px;
-            border: 1px solid rgba(255, 255, 255, .18);
-            background: rgba(255, 255, 255, .05);
-            color: rgba(255, 255, 255, .90);
+            border-radius: 10px;
+            border: 1px solid var(--line);
+            background: var(--surface);
+            color: var(--ink);
+            font-size: 15px;
             font-weight: 800;
-            font-size: 16px;
-            transition: transform 160ms ease, filter 160ms ease, background 160ms ease, border-color 160ms ease;
+            transition: transform 160ms ease, background 160ms ease, border-color 160ms ease;
         }
 
         .btn:hover {
             transform: translateY(-1px);
-            filter: brightness(1.05)
+            border-color: rgba(127, 75, 54, .42);
         }
 
         .btn.primary {
-            border: none;
-            background: linear-gradient(90deg, rgba(78, 161, 255, .96), rgba(139, 123, 255, .96));
-            box-shadow: 0 16px 46px rgba(78, 161, 255, .18);
+            border-color: var(--accent);
+            background: var(--accent);
+            color: #fff;
+        }
+
+        .btn.primary:hover {
+            border-color: var(--accent-2);
+            background: var(--accent-2);
         }
 
         .btn.ghost {
-            background: rgba(255, 255, 255, .04);
+            background: rgba(255, 255, 255, .52);
         }
 
-        /* HERO */
         .hero {
-            padding: 64px 0 40px
+            padding: 82px 0 62px;
         }
 
         .hero-grid {
             display: grid;
-            grid-template-columns: 1.1fr 0.9fr;
-            gap: 34px;
-            align-items: stretch;
+            grid-template-columns: minmax(0, 1fr) minmax(340px, .78fr);
+            gap: 52px;
+            align-items: center;
+            max-width: none;
         }
 
         .kicker {
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            font-size: 15px;
-            letter-spacing: .22em;
-            text-transform: uppercase;
-            color: rgba(255, 255, 255, .78);
             margin-bottom: 18px;
+            color: var(--accent);
+            font-size: 13px;
+            font-weight: 850;
+            letter-spacing: .13em;
+            text-transform: uppercase;
         }
 
         .kdot {
             width: 8px;
             height: 8px;
             border-radius: 50%;
-            background: var(--blue);
-            box-shadow: 0 0 0 7px rgba(78, 161, 255, .14);
+            background: var(--accent);
+        }
+
+        h1,
+        h2,
+        h3,
+        p {
+            margin-top: 0
         }
 
         h1 {
-            margin: 0 0 16px;
-            font-weight: 900;
-            letter-spacing: -0.04em;
-            line-height: 1.02;
-            font-size: clamp(56px, 5.6vw, 84px);
+            max-width: 720px;
+            margin-bottom: 18px;
+            font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+            font-size: clamp(44px, 5vw, 70px);
+            line-height: 1;
+            letter-spacing: -0.045em;
+            font-weight: 760;
         }
 
         .sub {
-            margin: 0;
-            max-width: 62ch;
-            color: rgba(255, 255, 255, .78);
-            font-size: clamp(18px, 1.55vw, 22px);
-            line-height: 1.55;
+            max-width: 720px;
+            margin-bottom: 0;
+            color: var(--muted);
+            font-size: clamp(18px, 1.42vw, 21px);
+            line-height: 1.62;
         }
 
         .hero-ctas {
             display: flex;
             gap: 12px;
             flex-wrap: wrap;
-            margin-top: 22px;
+            margin-top: 26px;
         }
 
-        .right-panel {
+        .scope-row {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-top: 18px;
+        }
+
+        .scope-pill {
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: rgba(255, 255, 255, .44);
+            color: var(--soft);
+            padding: 7px 10px;
+            font-size: 13px;
+            font-weight: 750;
+        }
+
+        .hero-build-panel {
+            border: 1px solid var(--line);
             border-radius: var(--r-xl);
-            border: 1px solid rgba(255, 255, 255, .14);
-            background: linear-gradient(180deg, rgba(255, 255, 255, .06), rgba(255, 255, 255, .035));
-            box-shadow: var(--shadow);
+            background: rgba(255, 255, 255, .72);
             padding: 28px;
+            box-shadow: 0 18px 48px rgba(58, 38, 28, .09);
+        }
+
+        .hero-build-panel h2 {
+            margin-bottom: 18px;
+            font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+            font-size: clamp(28px, 2.5vw, 38px);
+            line-height: 1.05;
+            letter-spacing: -0.035em;
+        }
+
+        .build-list {
+            display: grid;
+            gap: 10px;
+            margin-bottom: 18px;
+        }
+
+        .build-row {
             display: flex;
             align-items: center;
-            justify-content: center;
-            min-height: 280px;
-            position: relative;
-            overflow: hidden;
+            gap: 10px;
+            border: 1px solid var(--line);
+            border-radius: var(--r-md);
+            background: rgba(255, 255, 255, .7);
+            padding: 12px 13px;
+            color: var(--ink);
+            font-size: 15px;
+            font-weight: 800;
         }
 
-        .right-panel::before {
+        .build-row::before {
             content: "";
-            position: absolute;
-            inset: -60px;
-            background:
-                radial-gradient(circle at 30% 30%, rgba(78, 161, 255, .20), transparent 55%),
-                radial-gradient(circle at 70% 20%, rgba(139, 123, 255, .18), transparent 55%);
-            filter: blur(10px);
-            opacity: .9;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--accent);
+            flex: 0 0 auto;
         }
 
-        .right-panel-inner {
-            position: relative;
-            width: 100%;
-            max-width: 340px;
-            text-align: center;
-        }
-
-        .rp-title {
-            font-size: 30px;
-            font-weight: 900;
-            letter-spacing: -0.02em;
-            margin: 0 0 10px;
-        }
-
-        .rp-text {
+        .build-note {
             margin: 0;
-            color: rgba(255, 255, 255, .78);
-            font-size: 17px;
+            color: var(--muted);
+            font-size: 15px;
             line-height: 1.55;
         }
 
-        /* SECTIONS */
+        .screenshot-collage {
+            min-height: 390px;
+            position: relative;
+            isolation: isolate;
+        }
+
+        .screenshot-collage::before {
+            content: "";
+            position: absolute;
+            inset: 34px 34px 20px 28px;
+            border: 1px solid rgba(127, 75, 54, .18);
+            border-radius: var(--r-xl);
+            background: rgba(255, 255, 255, .42);
+            z-index: 0;
+        }
+
+        .shot {
+            position: absolute;
+            overflow: hidden;
+            border: 1px solid rgba(23, 23, 23, .14);
+            border-radius: var(--r-lg);
+            background: var(--surface);
+            box-shadow: var(--shadow);
+        }
+
+        .shot-main {
+            inset: 46px 54px 92px 0;
+            z-index: 2;
+        }
+
+        .shot-side {
+            top: 86px;
+            right: 0;
+            width: 44%;
+            height: 36%;
+            z-index: 3;
+        }
+
+        .shot-low {
+            left: 72px;
+            bottom: 0;
+            width: 58%;
+            height: 32%;
+            z-index: 4;
+        }
+
+        .shot-bg-left {
+            top: 0;
+            right: 82px;
+            width: 38%;
+            height: 28%;
+            z-index: 1;
+        }
+
+        .shot-bg-right {
+            top: 20px;
+            right: 4px;
+            width: 42%;
+            height: 30%;
+            z-index: 1;
+        }
+
+        .shot-bar {
+            height: 36px;
+            border-bottom: 1px solid var(--line);
+            background: linear-gradient(90deg, var(--surface-alt), #fff);
+        }
+
+        .shot-label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            height: 100%;
+            padding: 0 13px;
+            color: var(--muted);
+            font-size: 12px;
+            font-weight: 850;
+            letter-spacing: .07em;
+            text-transform: uppercase;
+        }
+
+        .shot-label::before {
+            content: "";
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--accent);
+        }
+
+        .shot-body {
+            padding: 18px;
+        }
+
+        .shot-image-body {
+            height: calc(100% - 36px);
+            padding: 0;
+        }
+
+        .hero-shot-image {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top center;
+        }
+
+        .screen-preview {
+            min-height: calc(100% - 36px);
+            display: grid;
+            gap: 12px;
+        }
+
+        .screen-hero {
+            min-height: 116px;
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            background:
+                linear-gradient(135deg, rgba(127, 75, 54, .14), transparent 42%),
+                #fbf8f6;
+            padding: 16px;
+        }
+
+        .screen-title {
+            width: min(230px, 86%);
+            height: 16px;
+            border-radius: 999px;
+            background: #cdbdb5;
+            margin-bottom: 12px;
+        }
+
+        .screen-copy {
+            width: 76%;
+            height: 9px;
+            border-radius: 999px;
+            background: #ded1cb;
+            margin-bottom: 8px;
+        }
+
+        .screen-copy.short {
+            width: 48%;
+        }
+
+        .screen-action {
+            width: 94px;
+            height: 25px;
+            border-radius: 8px;
+            background: var(--accent);
+            margin-top: 14px;
+        }
+
+        .screen-nav {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .screen-nav span,
+        .screen-pill {
+            display: inline-flex;
+            align-items: center;
+            min-height: 24px;
+            border-radius: 999px;
+            border: 1px solid var(--line);
+            background: rgba(255, 255, 255, .76);
+            color: var(--muted);
+            padding: 0 10px;
+            font-size: 11px;
+            font-weight: 800;
+        }
+
+        .screen-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 10px;
+        }
+
+        .screen-panel,
+        .screen-product,
+        .screen-sidebar,
+        .screen-content {
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            background: #f6efeb;
+        }
+
+        .screen-panel {
+            min-height: 58px;
+        }
+
+        .screen-store {
+            display: grid;
+            grid-template-rows: auto 1fr;
+            gap: 12px;
+            min-height: 100%;
+        }
+
+        .screen-products {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 9px;
+        }
+
+        .screen-product {
+            min-height: 56px;
+            background:
+                linear-gradient(180deg, #fbf8f6, #efe5df);
+        }
+
+        .screen-refresh {
+            display: grid;
+            grid-template-columns: .72fr 1fr;
+            gap: 12px;
+            min-height: 100%;
+        }
+
+        .screen-sidebar {
+            min-height: 112px;
+            background:
+                linear-gradient(180deg, rgba(127, 75, 54, .13), transparent),
+                #f7f1ed;
+        }
+
+        .screen-content {
+            padding: 14px;
+            min-height: 112px;
+        }
+
+        .project-frame {
+            min-height: calc(100% - 36px);
+            display: grid;
+            gap: 14px;
+        }
+
+        .project-frame.local {
+            grid-template-rows: .86fr 1fr;
+        }
+
+        .project-frame.store {
+            grid-template-rows: .7fr 1fr;
+        }
+
+        .project-frame.refresh {
+            grid-template-columns: .86fr 1fr;
+            min-height: 100%;
+        }
+
+        .project-hero-block,
+        .project-panel,
+        .project-sidebar,
+        .product-tile,
+        .project-cta {
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            background: linear-gradient(180deg, #fbf8f6, var(--surface-alt));
+        }
+
+        .project-hero-block {
+            min-height: 112px;
+            padding: 16px;
+        }
+
+        .project-panel {
+            min-height: 76px;
+            padding: 14px;
+        }
+
+        .project-sidebar {
+            min-height: 120px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 10px;
+        }
+
+        .product-tile {
+            min-height: 58px;
+        }
+
+        .project-cta {
+            width: 86px;
+            height: 22px;
+            margin-top: 14px;
+            background: var(--accent);
+        }
+
+        .line {
+            height: 10px;
+            border-radius: 999px;
+            background: #ded1cb;
+            margin-bottom: 10px;
+        }
+
+        .line.short {
+            width: 45%
+        }
+
+        .line.mid {
+            width: 68%
+        }
+
+        .line.long {
+            width: 88%
+        }
+
+        .shot-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-top: 18px;
+        }
+
+        .shot-box {
+            min-height: 64px;
+            border-radius: 10px;
+            background: #f6efeb;
+            border: 1px solid var(--line);
+        }
+
+        .showcase-note {
+            position: absolute;
+            right: 22px;
+            bottom: 18px;
+            z-index: 5;
+            max-width: 210px;
+            border: 1px solid rgba(23, 23, 23, .12);
+            border-radius: var(--r-md);
+            background: rgba(255, 255, 255, .92);
+            color: var(--muted);
+            padding: 12px 14px;
+            font-size: 13px;
+            line-height: 1.4;
+            box-shadow: 0 12px 26px rgba(33, 29, 24, .10);
+        }
+
+        .showcase-tag {
+            position: absolute;
+            left: 18px;
+            top: 0;
+            z-index: 5;
+            border: 1px solid rgba(23, 23, 23, .12);
+            border-radius: 999px;
+            background: rgba(255, 255, 255, .9);
+            color: var(--accent);
+            padding: 8px 12px;
+            font-size: 12px;
+            font-weight: 850;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            box-shadow: 0 10px 22px rgba(33, 29, 24, .08);
+        }
+
         .section {
-            padding: 64px 0
+            padding: 82px 0;
+        }
+
+        .section.dark {
+            color: var(--ink);
+            background: var(--mist);
         }
 
         .section-head {
-            max-width: 920px;
-            margin-bottom: 22px
+            max-width: 820px;
+            margin-bottom: 24px;
+        }
+
+        #why-prizix {
+            padding: 110px 0;
+        }
+
+        #why-prizix .section-head {
+            max-width: 1040px;
+            margin-bottom: 34px;
+        }
+
+        #why-prizix h2 {
+            max-width: 960px;
+            font-size: clamp(44px, 4.6vw, 70px);
+            line-height: 1;
+        }
+
+        .credibility-wrap {
+            display: grid;
+            grid-template-columns: minmax(0, 1.04fr) minmax(0, .96fr);
+            gap: 32px;
+            align-items: stretch;
+        }
+
+        .credibility-lead {
+            border: 1px solid var(--line);
+            border-radius: var(--r-lg);
+            background: rgba(255, 255, 255, .78);
+            padding: 36px;
+            box-shadow: 0 18px 42px rgba(33, 48, 44, .06);
+        }
+
+        .credibility-lead p {
+            margin-bottom: 0;
+            color: var(--muted);
+            font-size: clamp(20px, 1.7vw, 25px);
+            line-height: 1.58;
+        }
+
+        .credibility-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .proof-point {
+            border: 1px solid var(--line);
+            border-radius: var(--r-md);
+            background: rgba(255, 255, 255, .66);
+            padding: 24px;
+        }
+
+        .proof-point h3 {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 10px;
+            font-size: 20px;
+            line-height: 1.25;
+        }
+
+        .proof-point h3::before {
+            content: "";
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background: var(--accent);
+            flex: 0 0 auto;
+        }
+
+        .proof-point p {
+            margin-bottom: 0;
+            color: var(--muted);
+            font-size: 16px;
+            line-height: 1.62;
         }
 
         h2 {
-            margin: 0 0 10px;
-            font-size: clamp(34px, 3vw, 44px);
-            letter-spacing: -0.02em;
-            line-height: 1.1;
-            font-weight: 900;
+            margin-bottom: 10px;
+            font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+            font-size: clamp(34px, 3.2vw, 48px);
+            line-height: 1.06;
+            letter-spacing: -0.03em;
+            font-weight: 720;
         }
 
         .section-lead {
-            margin: 0;
+            margin-bottom: 0;
             color: var(--muted);
-            font-size: clamp(18px, 1.35vw, 22px);
-            line-height: 1.55;
+            font-size: clamp(17px, 1.25vw, 20px);
+            line-height: 1.6;
         }
 
-        .grid-4 {
-            display: grid;
-            grid-template-columns: repeat(4, minmax(0, 1fr));
-            gap: 16px
+        .dark .section-lead,
+        .dark .card p,
+        .dark .bullets {
+            color: var(--muted);
         }
 
         .grid-3 {
             display: grid;
             grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 16px
+            gap: 18px;
+        }
+
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 18px;
         }
 
         .card {
+            border: 1px solid var(--line);
             border-radius: var(--r-lg);
-            border: 1px solid var(--border);
-            background: linear-gradient(180deg, var(--panel), rgba(255, 255, 255, .03));
-            padding: 18px;
-            box-shadow: 0 12px 40px rgba(0, 0, 0, .16);
-            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, .78);
+            padding: 24px;
+            box-shadow: 0 12px 32px rgba(33, 48, 44, .06);
+        }
+
+        .dark .card {
+            border-color: rgba(21, 25, 29, .08);
+            background: rgba(255, 255, 255, .66);
+            box-shadow: 0 10px 28px rgba(33, 48, 44, .05);
         }
 
         .card-top {
             display: flex;
-            align-items: baseline;
+            align-items: center;
             justify-content: space-between;
             gap: 12px;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
 
         .card-num {
-            font-weight: 800;
-            font-size: 13px;
-            letter-spacing: .14em;
-            color: rgba(255, 255, 255, .65);
-            border: 1px solid rgba(255, 255, 255, .18);
-            border-radius: 999px;
-            padding: 6px 10px;
-            background: rgba(255, 255, 255, .03);
-            flex: 0 0 auto;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 38px;
+            height: 30px;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            color: var(--accent);
+            font-size: 12px;
+            font-weight: 850;
+            letter-spacing: .12em;
+        }
+
+        .dark .card-num {
+            border-color: var(--line);
+            color: var(--accent);
         }
 
         .card h3 {
-            margin: 0;
-            font-size: 20px;
-            font-weight: 900;
-            letter-spacing: -0.01em;
-            line-height: 1.25;
+            margin-bottom: 10px;
+            font-size: 21px;
+            line-height: 1.18;
+            letter-spacing: -0.02em;
+            font-weight: 850;
         }
 
         .card p {
-            margin: 0 0 10px;
-            color: rgba(255, 255, 255, .82);
+            margin-bottom: 14px;
+            color: var(--muted);
             font-size: 16px;
-            line-height: 1.6;
+            line-height: 1.62;
         }
 
         .bullets {
-            margin: 10px 0 0;
+            margin: 0;
             padding-left: 18px;
-            color: rgba(255, 255, 255, .78);
+            color: var(--muted);
             font-size: 15px;
             line-height: 1.55;
         }
@@ -343,98 +824,208 @@
             margin: 6px 0
         }
 
+        .text-link {
+            display: inline-flex;
+            margin-top: 4px;
+            color: var(--accent);
+            font-size: 15px;
+            font-weight: 850;
+        }
+
+        .dark .text-link {
+            color: var(--accent)
+        }
+
         .cta-row {
-            margin-top: 18px;
             display: flex;
             gap: 12px;
             flex-wrap: wrap;
-            align-items: center
+            align-items: center;
+            margin-top: 22px;
         }
 
-        .fineprint {
-            margin-top: 14px;
-            color: var(--muted2);
-            font-size: 14px
+        .process-card {
+            min-height: 100%;
         }
 
-        .mini-panel {
-            margin-top: 16px;
-            border-radius: var(--r-lg);
-            border: 1px solid rgba(255, 255, 255, .16);
-            background: linear-gradient(180deg, var(--panel2), rgba(255, 255, 255, .03));
+        .portfolio-card {
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .project-carousel {
+            display: flex;
+            gap: 18px;
+            overflow-x: auto;
+            padding-bottom: 8px;
+            scroll-snap-type: x proximity;
+        }
+
+        .project-carousel .portfolio-card {
+            flex: 0 0 min(360px, 86vw);
+            scroll-snap-align: start;
+        }
+
+        .project-thumb {
+            min-height: 190px;
+            border-bottom: 1px solid var(--line);
+            background:
+                linear-gradient(135deg, rgba(127, 75, 54, .10), transparent 42%),
+                var(--surface-alt);
             padding: 16px;
         }
 
-        .mini-title {
-            font-weight: 800;
-            letter-spacing: .10em;
-            text-transform: uppercase;
-            font-size: 12px;
-            color: rgba(255, 255, 255, .70);
-            margin-bottom: 10px;
+        .project-window {
+            height: 156px;
+            border: 1px solid var(--line);
+            border-radius: var(--r-md);
+            background: var(--surface);
+            padding: 14px;
+            box-shadow: 0 10px 22px rgba(33, 48, 44, .06);
         }
 
-        .steps {
-            display: flex;
+        .project-window.image-frame {
+            display: block;
+            overflow: hidden;
+            padding: 0;
+        }
+
+        .project-screenshot {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top center;
+        }
+
+        .project-window.service {
+            display: grid;
+            grid-template-columns: 1.05fr .95fr;
             gap: 12px;
-            flex-wrap: wrap
         }
 
-        .step {
-            display: inline-flex;
-            align-items: center;
+        .project-window.storefront {
+            display: grid;
+            grid-template-rows: auto 1fr;
             gap: 10px;
-            padding: 8px 12px;
-            border-radius: 999px;
-            border: 1px solid rgba(255, 255, 255, .16);
-            background: rgba(255, 255, 255, .04);
-            font-size: 14px;
-            color: rgba(255, 255, 255, .84);
         }
 
-        .step-dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: var(--blue);
-            box-shadow: 0 0 0 4px rgba(78, 161, 255, .14);
+        .project-window.improvement {
+            display: grid;
+            grid-template-columns: .7fr 1fr;
+            gap: 12px;
         }
 
-        /* ABOUT readability fix */
-        .about-wrap {
+        .project-shot-copy {
+            padding: 4px 0;
+        }
+
+        .project-shot-media {
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            background:
+                linear-gradient(180deg, rgba(127, 75, 54, .12), transparent),
+                #f7f0ec;
+        }
+
+        .project-product-row {
             display: grid;
             grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 16px
+            gap: 8px;
         }
 
-        .about-box {
+        .project-product {
+            min-height: 74px;
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            background: linear-gradient(180deg, #fbf8f6, #efe4dd);
+        }
+
+        .project-improve-stack {
+            display: grid;
+            gap: 8px;
+        }
+
+        .project-mini-panel {
+            min-height: 42px;
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            background: #f7f0ec;
+        }
+
+        .project-body {
+            padding: 20px;
+        }
+
+        .eyebrow {
+            margin-bottom: 8px;
+            color: var(--accent);
+            font-size: 12px;
+            font-weight: 850;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+        }
+
+        .contact-wrap {
+            display: grid;
+            grid-template-columns: .86fr 1.14fr;
+            gap: 28px;
+            align-items: start;
+        }
+
+        .contact-copy {
+            border: 1px solid var(--line);
             border-radius: var(--r-lg);
-            border: 1px solid rgba(255, 255, 255, .16);
-            background: rgba(255, 255, 255, .05);
+            background: rgba(255, 255, 255, .68);
+            padding: 24px;
+        }
+
+        .contact-copy p {
+            color: var(--muted);
+            line-height: 1.65;
+        }
+
+        .contact-reassurance {
+            margin-top: 22px;
+            border: 1px solid var(--line);
+            border-radius: var(--r-md);
+            background: rgba(255, 255, 255, .72);
             padding: 18px;
         }
 
-        .about-box h3 {
+        .contact-reassurance h3 {
             margin: 0 0 10px;
-            font-size: 20px;
-            font-weight: 900
+            font-size: 17px;
+            line-height: 1.25;
         }
 
-        .about-box p {
+        .contact-reassurance ul {
             margin: 0;
-            color: rgba(255, 255, 255, .86);
-            font-size: 16px;
-            line-height: 1.7;
-            letter-spacing: 0.005em;
+            padding-left: 18px;
+            color: var(--muted);
+            font-size: 15px;
+            line-height: 1.6;
         }
 
-        /* CONTACT */
+        .contact-reassurance li {
+            margin: 6px 0;
+        }
+
+        .contact-reassurance p {
+            margin: 14px 0 0;
+            color: var(--ink);
+            font-size: 15px;
+            font-weight: 750;
+            line-height: 1.5;
+        }
+
         .form-panel {
             border-radius: var(--r-lg);
-            border: 1px solid rgba(255, 255, 255, .16);
-            background: rgba(255, 255, 255, .05);
+            border: 1px solid var(--line);
+            background: rgba(255, 255, 255, .78);
             padding: 18px;
-            margin-top: 10px;
+            margin-top: 0;
+            box-shadow: 0 12px 32px rgba(33, 48, 44, .06);
         }
 
         .form-grid {
@@ -445,17 +1036,17 @@
 
         .field {
             width: 100%;
-            border-radius: 12px;
-            border: 1px solid rgba(255, 255, 255, .16);
-            background: rgba(0, 0, 0, .18);
-            color: rgba(255, 255, 255, .92);
+            border-radius: 10px;
+            border: 1px solid var(--line);
+            background: rgba(255, 255, 255, .86);
+            color: var(--ink);
             padding: 12px 12px;
             font-size: 15px;
             outline: none;
         }
 
         .field::placeholder {
-            color: rgba(255, 255, 255, .55)
+            color: var(--soft)
         }
 
         textarea.field {
@@ -473,52 +1064,109 @@
 
         .form-note {
             font-size: 14px;
-            color: var(--muted2)
+            color: var(--muted)
         }
 
-        /* RESPONSIVE */
-        @media (max-width: 1100px) {
-            .hero-grid {
-                grid-template-columns: 1fr
+        .footer {
+            border-top: 1px solid rgba(23, 23, 23, .10);
+            padding: 28px 0;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            gap: 18px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 980px) {
+            .hero-grid,
+            .contact-wrap {
+                grid-template-columns: 1fr;
             }
 
-            .right-panel {
-                min-height: 220px
+            .screenshot-collage {
+                min-height: 360px;
             }
 
             .grid-4 {
-                grid-template-columns: repeat(2, minmax(0, 1fr))
+                grid-template-columns: repeat(2, minmax(0, 1fr));
             }
 
-            .about-wrap {
-                grid-template-columns: 1fr
+            .grid-3 {
+                grid-template-columns: 1fr;
+            }
+
+            .credibility-wrap {
+                grid-template-columns: 1fr;
+            }
+
+            .form-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
             }
         }
 
         @media (max-width: 720px) {
             .container {
-                width: min(1180px, calc(100% - 32px))
+                width: min(1160px, calc(100% - 32px));
             }
 
             .nav-links {
-                display: none
+                display: none;
             }
 
-            .grid-4,
-            .grid-3 {
-                grid-template-columns: 1fr
-            }
-
-            .section {
-                padding: 54px 0
+            .nav-cta .btn {
+                min-height: 40px;
+                padding: 0 14px;
+                font-size: 14px;
             }
 
             .hero {
-                padding: 48px 0 24px
+                padding: 48px 0 34px;
             }
 
             h1 {
-                font-size: 54px
+                font-size: 42px;
+            }
+
+            .section {
+                padding: 54px 0;
+            }
+
+            .screenshot-collage {
+                min-height: 320px;
+            }
+
+            .shot-main {
+                inset: 34px 0 42px 20px;
+            }
+
+            .shot-side {
+                width: 48%;
+                height: 38%;
+            }
+
+            .shot-low {
+                width: 54%;
+                height: 32%;
+            }
+
+            .grid-4,
+            .credibility-grid,
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-inner {
+                flex-direction: column;
             }
         }
     </style>
@@ -531,352 +1179,489 @@
 </head>
 
 <body>
-    <!-- NAV -->
     <div class="nav">
         <div class="container">
             <div class="nav-inner">
-                <div class="brand">
+                <a class="brand" href="#top" aria-label="PRIZIX home">
                     <span class="brand-dot"></span>
                     <span>PRIZIX</span>
-                </div>
+                </a>
 
-                <div class="nav-links">
-                    <a href="#services">Services</a>
-                    <a href="#architecture">Architecture</a>
-                    <a href="#ai">AI Visibility</a>
-                    <a href="#about">About</a>
+                <div class="nav-links" aria-label="Primary navigation">
+                    <a href="#top">Home</a>
+                    <a href="#solutions">Solutions</a>
+                    <a href="#portfolio">Portfolio</a>
+                    <a href="#contact">Contact</a>
                 </div>
 
                 <div class="nav-cta">
-                    <a class="btn primary" href="#contact">Let’s Talk</a>
+                    <a class="btn primary" href="#contact">Book a Consultation</a>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- HERO -->
     <header class="hero" id="top">
         <div class="container">
             <div class="hero-grid">
                 <div>
-                    <div class="kicker"><span class="kdot"></span> E-COMMERCE ENGINEERING</div>
-                    <h1>High-Performance <span class="nowrap">E-Commerce.</span></h1>
+                    <div class="kicker"><span class="kdot"></span> Websites • Ecommerce • Business Improvements</div>
+                    <h1>Your business has grown. Has your online presence kept up?</h1>
                     <p class="sub">
-                        We design and engineer scalable Shopify systems — for new brands, growing stores, and businesses
-                        migrating
-                        from WooCommerce, Magento, or custom platforms.
+                        Whether you're building a new website, redesigning an existing one, or migrating from
+                        WooCommerce, Magento, Wix, Squarespace, or another platform to Shopify, PRIZIX helps businesses
+                        create clearer customer experiences and stronger online stores.
                     </p>
                     <div class="hero-ctas">
-                        <a class="btn primary" href="#contact">Let’s Talk</a>
-                        <a class="btn ghost" href="#services">Explore Services</a>
+                        <a class="btn primary" href="#contact">Book a Consultation</a>
+                        <a class="btn ghost" href="#solutions">View Solutions</a>
+                    </div>
+                    <div class="scope-row" aria-label="PRIZIX scope">
+                        <span class="scope-pill">New Websites</span>
+                        <span class="scope-pill">Website Redesigns</span>
+                        <span class="scope-pill">Shopify Stores</span>
+                        <span class="scope-pill">Shopify Migrations</span>
                     </div>
                 </div>
 
-                <div class="right-panel" aria-hidden="true">
-                    <div class="right-panel-inner">
-                        <div class="rp-title">Systems. Not Patches.</div>
-                        <p class="rp-text">
-                            Engineering foundations that stay fast, clean, and scalable — even as the store grows.
-                        </p>
+                <div class="hero-build-panel">
+                    <h2>Focused on websites and Shopify stores that need to work better.</h2>
+                    <div class="build-list">
+                        <div class="build-row">Clearer pages and customer paths</div>
+                        <div class="build-row">Stronger store browsing experience</div>
+                        <div class="build-row">Shopify builds and migrations</div>
+                        <div class="build-row">Website redesigns that match the business today</div>
                     </div>
+                    <p class="build-note">
+                        Built for businesses that need practical online improvements, not decorative redesigns.
+                    </p>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- SERVICES -->
-    <section class="section" id="services">
+    <section class="section" id="who-we-help">
         <div class="container">
             <div class="section-head">
-                <h2>Services</h2>
+                <h2>Who We Help</h2>
                 <p class="section-lead">
-                    PRIZIX designs and engineers scalable Shopify systems — for new brands, growing stores, and
-                    businesses
-                    migrating from WooCommerce, Magento, or custom platforms. Built for speed, stability, and clean
-                    scale.
+                    Start with the situation that sounds closest to where your business is right now.
+                </p>
+            </div>
+
+            <div class="grid-3">
+                <div class="card">
+                    <div class="card-top">
+                        <span class="card-num">01</span>
+                    </div>
+                    <h3>Ready to Be Found Online</h3>
+                    <p>
+                        People ask where they can find you online, but you do not yet have a website that clearly
+                        presents your business and makes contacting you easy.
+                    </p>
+                    <ul class="bullets">
+                        <li>A professional place to send customers</li>
+                        <li>Clear services and contact information</li>
+                        <li>A stronger first impression online</li>
+                    </ul>
+                    <a class="text-link" href="#contact">Start Your Website Project</a>
+                </div>
+
+                <div class="card">
+                    <div class="card-top">
+                        <span class="card-num">02</span>
+                    </div>
+                    <h3>Your Website Feels Behind</h3>
+                    <p>
+                        The business has evolved, but the website no longer reflects where you are today.
+                    </p>
+                    <ul class="bullets">
+                        <li>Website redesigns and refreshes</li>
+                        <li>Better mobile experience</li>
+                        <li>Clearer customer paths and calls to action</li>
+                    </ul>
+                    <a class="text-link" href="#contact">Discuss a Website Refresh or Redesign</a>
+                </div>
+
+                <div class="card">
+                    <div class="card-top">
+                        <span class="card-num">03</span>
+                    </div>
+                    <h3>Selling Online or Moving from Another Platform</h3>
+                    <p>
+                        Whether you're launching a new store, migrating from WooCommerce, Magento, Wix, Squarespace, or
+                        improving an existing Shopify store, the goal is a smoother path from browsing to buying.
+                    </p>
+                    <ul class="bullets">
+                        <li>Shopify store builds</li>
+                        <li>Shopify migrations and redesigns</li>
+                        <li>Better product discovery and buying flow</li>
+                    </ul>
+                    <a class="text-link" href="#contact">Discuss Your Store Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section dark" id="solutions">
+        <div class="container">
+            <div class="section-head">
+                <h2>Solutions</h2>
+                <p class="section-lead">
+                    Focused support for websites and Shopify stores that need to work harder for the business behind
+                    them.
+                </p>
+            </div>
+
+            <div class="grid-3">
+                <div class="card">
+                    <div class="card-top">
+                        <span class="card-num">01</span>
+                    </div>
+                    <h3>Business Websites</h3>
+                    <p>
+                        Websites designed to clearly explain what you do, build trust, and help customers take the next
+                        step.
+                    </p>
+                    <ul class="bullets">
+                        <li>New website builds</li>
+                        <li>Website redesigns</li>
+                        <li>Clear service and contact paths</li>
+                    </ul>
+                    <a class="text-link" href="#contact">Discuss a Website Project</a>
+                </div>
+
+                <div class="card">
+                    <div class="card-top">
+                        <span class="card-num">02</span>
+                    </div>
+                    <h3>Shopify Builds, Redesigns &amp; Migrations</h3>
+                    <p>
+                        Shopify stores built, redesigned, or migrated from other platforms to create a smoother customer
+                        journey from discovery to purchase.
+                    </p>
+                    <ul class="bullets">
+                        <li>Shopify store builds</li>
+                        <li>Shopify redesigns</li>
+                        <li>Migrations from WooCommerce, Magento, Wix, Squarespace, and other platforms</li>
+                    </ul>
+                    <a class="text-link" href="#contact">Discuss a Shopify Project</a>
+                </div>
+
+                <div class="card">
+                    <div class="card-top">
+                        <span class="card-num">03</span>
+                    </div>
+                    <h3>Website Redesigns &amp; Refreshes</h3>
+                    <p>
+                        Practical improvements for businesses whose website no longer reflects the quality of the
+                        business itself.
+                    </p>
+                    <ul class="bullets">
+                        <li>Better customer experience</li>
+                        <li>Clearer messaging and structure</li>
+                        <li>Stronger conversion paths</li>
+                    </ul>
+                    <a class="text-link" href="#contact">Discuss a Website Refresh</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="why-prizix">
+        <div class="container">
+            <div class="section-head">
+                <div class="eyebrow">Why PRIZIX</div>
+                <h2>Built from real online business experience.</h2>
+            </div>
+
+            <div class="credibility-wrap">
+                <div class="credibility-lead">
+                    <p>
+                        PRIZIX is built on experience across Shopify, Amazon, Walmart Marketplace, ecommerce brands, and
+                        customer-facing websites. The goal is not simply to make a website look better. It is to help
+                        customers understand the business, trust what they see, and take the next step with confidence.
+                    </p>
+                </div>
+
+                <div class="credibility-grid">
+                    <div class="proof-point">
+                        <h3>Selling online changes the details</h3>
+                        <p>
+                            Product pages, store structure, customer questions, shipping expectations, and buying paths
+                            all affect whether people keep moving or leave.
+                        </p>
+                    </div>
+
+                    <div class="proof-point">
+                        <h3>Customers do not read everything</h3>
+                        <p>
+                            They scan, compare, hesitate, and look for signals that make the next step feel clear and
+                            safe.
+                        </p>
+                    </div>
+
+                    <div class="proof-point">
+                        <h3>Useful beats complicated</h3>
+                        <p>
+                            The goal is a cleaner online presence the business can use, maintain, and improve without
+                            extra noise.
+                        </p>
+                    </div>
+
+                    <div class="proof-point">
+                        <h3>The website is only one piece</h3>
+                        <p>
+                            Follow-up, store flow, service clarity, customer experience, and day-to-day operations all
+                            shape how well the business works online.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="how-we-work">
+        <div class="container">
+            <div class="section-head">
+                <h2>How We Work</h2>
+                <p class="section-lead">
+                    A simple process keeps the work clear, practical, and tied to the business problem.
                 </p>
             </div>
 
             <div class="grid-4">
-                <div class="card">
+                <div class="card process-card">
                     <div class="card-top">
-                        <div class="card-num">01</div>
-                        <h3>Shopify Builds &amp; Rebuilds</h3>
+                        <span class="card-num">01</span>
                     </div>
+                    <h3>Understand</h3>
                     <p>
-                        Launch new stores with a structured foundation: clean theme setup, catalog architecture, and
-                        operational
-                        workflows designed for long-term scale.
+                        Understand the business, customers, and how people currently find, evaluate, and interact with
+                        the business online.
                     </p>
                     <ul class="bullets">
-                        <li>System structure + catalog planning</li>
-                        <li>Theme implementation + UX integrity</li>
-                        <li>Apps, integrations, and clean handoff</li>
+                        <li>Business goals and priorities</li>
+                        <li>Customer expectations and friction</li>
+                        <li>Current website, store, or online presence</li>
                     </ul>
                 </div>
 
-                <div class="card">
+                <div class="card process-card">
                     <div class="card-top">
-                        <div class="card-num">02</div>
-                        <h3>Platform Migrations</h3>
+                        <span class="card-num">02</span>
                     </div>
+                    <h3>Prioritize</h3>
                     <p>
-                        Move from WooCommerce, Magento, or custom platforms to Shopify without breaking revenue, SEO, or
-                        operations. Migration is engineered, not rushed.
+                        Focus on the changes that will have the greatest practical impact instead of trying to improve
+                        everything at once.
                     </p>
                     <ul class="bullets">
-                        <li>Redirects + SEO-safe structure</li>
-                        <li>Catalog + customer/order transfer</li>
-                        <li>Staged launch + validation plan</li>
+                        <li>Clear priorities</li>
+                        <li>Simpler customer paths</li>
+                        <li>Practical improvement plan</li>
                     </ul>
                 </div>
 
-                <div class="card">
+                <div class="card process-card">
                     <div class="card-top">
-                        <div class="card-num">03</div>
-                        <h3>Performance &amp; CRO Upgrades</h3>
+                        <span class="card-num">03</span>
                     </div>
+                    <h3>Build &amp; Improve</h3>
                     <p>
-                        Fix what actually moves revenue: speed, product flow clarity, collection structure, and checkout
-                        friction.
-                        No random redesigns.
+                        Create or improve the website, ecommerce store, pages, workflows, or customer experience based
+                        on the agreed priorities.
                     </p>
                     <ul class="bullets">
-                        <li>Speed + Core Web Vitals fixes</li>
-                        <li>Conversion cleanup across templates</li>
-                        <li>Tracking + measurement integrity</li>
+                        <li>New websites or redesigns</li>
+                        <li>Ecommerce improvements</li>
+                        <li>Better customer experience</li>
                     </ul>
                 </div>
 
-                <div class="card">
+                <div class="card process-card">
                     <div class="card-top">
-                        <div class="card-num">04</div>
-                        <h3>AI Visibility Systems</h3>
+                        <span class="card-num">04</span>
                     </div>
+                    <h3>Launch &amp; Support</h3>
                     <p>
-                        Structured data + semantic architecture so AI-driven discovery can interpret your catalog
-                        correctly and
-                        surface products with less ambiguity.
+                        Launch with clarity and make sure the business can confidently use, maintain, and build upon
+                        what was created.
                     </p>
                     <ul class="bullets">
-                        <li>Schema + metadata strategy</li>
-                        <li>Information architecture upgrades</li>
-                        <li>Collection + product semantics</li>
+                        <li>Smooth launch process</li>
+                        <li>Clear handoff and guidance</li>
+                        <li>Room for future improvements</li>
                     </ul>
-                </div>
-            </div>
-
-            <div class="cta-row">
-                <a class="btn primary" href="#contact">Let’s Talk</a>
-                <a class="btn ghost" href="#architecture">See the Architecture Approach</a>
-            </div>
-
-            <div class="fineprint">
-                Independent. No platform lock-in — Shopify is the foundation, not the constraint.
-            </div>
-        </div>
-    </section>
-
-    <!-- ARCHITECTURE -->
-    <section class="section" id="architecture">
-        <div class="container">
-            <div class="section-head">
-                <h2>Architecture</h2>
-                <p class="section-lead">
-                    E-commerce breaks when decisions are made page-by-page. We design the system first — so performance,
-                    conversion, operations, and visibility improve together.
-                </p>
-            </div>
-
-            <div class="grid-3">
-                <div class="card">
-                    <div class="card-top">
-                        <div class="card-num">01</div>
-                        <h3>Structure</h3>
-                    </div>
-                    <p>
-                        Clear catalog logic (products, variants, collections) and navigation that makes sense to humans
-                        and
-                        machines. This prevents chaos later.
-                    </p>
-                </div>
-
-                <div class="card">
-                    <div class="card-top">
-                        <div class="card-num">02</div>
-                        <h3>Speed</h3>
-                    </div>
-                    <p>
-                        Performance isn’t a plugin. It’s theme decisions, assets, scripts, and template discipline —
-                        measured and
-                        enforced.
-                    </p>
-                </div>
-
-                <div class="card">
-                    <div class="card-top">
-                        <div class="card-num">03</div>
-                        <h3>Scalability</h3>
-                    </div>
-                    <p>
-                        Systems that stay clean as teams, SKUs, and channels grow: rules, workflows, integrations, and a
-                        maintainable Shopify stack.
-                    </p>
-                </div>
-            </div>
-
-            <div class="mini-panel">
-                <div class="mini-title">How projects run</div>
-                <div class="steps">
-                    <div class="step"><span class="step-dot"></span> Audit</div>
-                    <div class="step"><span class="step-dot"></span> System Design</div>
-                    <div class="step"><span class="step-dot"></span> Build</div>
-                    <div class="step"><span class="step-dot"></span> Validate</div>
-                    <div class="step"><span class="step-dot"></span> Launch</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- AI VISIBILITY -->
-    <section class="section" id="ai">
+    <section class="section" id="portfolio">
         <div class="container">
             <div class="section-head">
-                <h2>AI Visibility</h2>
+                <h2>Selected Projects</h2>
                 <p class="section-lead">
-                    Search is no longer just Google links. AI systems summarize, interpret, and recommend. We implement
-                    the
-                    structure that helps those systems understand your store correctly.
+                    A selection of recent ecommerce and website projects.
                 </p>
             </div>
 
-            <div class="grid-3">
-                <div class="card">
-                    <div class="card-top">
-                        <div class="card-num">01</div>
-                        <h3>Structured Data</h3>
-                    </div>
-                    <p>
-                        Schema, metadata, and product semantics that reduce ambiguity — so your catalog is
-                        machine-readable and
-                        consistently interpreted.
-                    </p>
-                </div>
-
-                <div class="card">
-                    <div class="card-top">
-                        <div class="card-num">02</div>
-                        <h3>Semantic Architecture</h3>
-                    </div>
-                    <p>
-                        Collections, filters, and information hierarchy designed to reflect real buyer intent — not
-                        internal
-                        categories.
-                    </p>
-                </div>
-
-                <div class="card">
-                    <div class="card-top">
-                        <div class="card-num">03</div>
-                        <h3>Visibility Integrity</h3>
-                    </div>
-                    <p>
-                        Canonicals, redirects, duplication control, and clean indexing behavior — especially during
-                        rebuilds and
-                        migrations.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section class="section" id="about">
-        <div class="container">
-            <div class="section-head">
-                <h2>About PRIZIX</h2>
-                <p class="section-lead">
-                    PRIZIX focuses on building commerce systems that hold up under growth — fast, structured, and
-                    engineered for
-                    long-term stability.
-                </p>
-            </div>
-
-            <div class="about-wrap">
-                <div class="about-box">
-                    <h3>What we actually do</h3>
-                    <p>
-                        We design and engineer scalable Shopify systems — for new brands, growing stores, and businesses
-                        migrating
-                        from WooCommerce, Magento, or custom platforms.
-                    </p>
-                </div>
-
-                <div class="about-box">
-                    <h3>What we avoid</h3>
-                    <p>
-                        Random redesigns, bloated app stacks, and “quick fixes” that break the store six weeks later. We
-                        build the
-                        structure once, then improve it with discipline.
-                    </p>
-                </div>
-
-                <div class="about-box">
-                    <h3>How to work with us</h3>
-                    <p>
-                        Start with a quick conversation. You’ll get clarity on risks, priorities, and a build plan —
-                        whether
-                        you’re launching, rebuilding, or migrating.
-                    </p>
-                </div>
-            </div>
-
-            <div class="cta-row">
-                <a class="btn primary" href="#contact">Let’s Talk</a>
-                <a class="btn ghost" href="#services">Explore Services</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- CONTACT (only ONCE — your pasted code had it twice) -->
-    <section class="section" id="contact">
-        <div class="container">
-
-            <div class="section-head">
-                <h2>Contact Us</h2>
-                <p class="section-lead">
-                    Tell us what you’re building and what needs to improve. We'll reply with the next step and a clean
-                    plan.
-                </p>
-            </div>
-
-            <div class="form-panel">
-                <form id="contact-form">
-
-                    <div class="form-grid">
-                        <input type="text" class="field" name="from_name" placeholder="Name">
-                        <input type="text" class="field" name="company" placeholder="Company">
-                        <input type="text" class="field" name="website" placeholder="Website">
-                        <input type="email" class="field" name="reply_to" placeholder="Email">
-
-                    </div>
-
-                    <textarea class="field" name="message" rows="6"
-                        placeholder="What are you trying to improve (launch, rebuild, migration, performance, conversion...)"
-                        required></textarea>
-
-                    <div class="form-actions">
-                        <button id="contact-submit" type="submit" class="btn primary">Send</button>
-                        <div class="form-note">
-                            You’ll get a reply with a recommended path (and what to ignore).
+            <div class="project-carousel" aria-label="Selected ecommerce and Shopify projects">
+                <div class="card portfolio-card">
+                    <div class="project-thumb" aria-hidden="true">
+                        <div class="project-window image-frame">
+                            <img class="project-screenshot" src="assets/portfolio/beis-travel.jpg"
+                                alt="BÉIS Travel ecommerce homepage screenshot">
                         </div>
                     </div>
+                    <div class="project-body">
+                        <div class="eyebrow">Ecommerce</div>
+                        <h3>BÉIS Travel</h3>
+                        <p>
+                            Ecommerce website experience focused on usability, trust, and conversion.
+                        </p>
+                    </div>
+                </div>
 
-                </form>
+                <div class="card portfolio-card">
+                    <div class="project-thumb" aria-hidden="true">
+                        <div class="project-window image-frame">
+                            <img class="project-screenshot" src="assets/portfolio/jshealth-vitamins.jpg"
+                                alt="JSHealth Vitamins Shopify storefront screenshot">
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <div class="eyebrow">Shopify</div>
+                        <h3>JSHealth Vitamins</h3>
+                        <p>
+                            Shopify ecommerce experience focused on product discovery and customer journey optimization.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card portfolio-card">
+                    <div class="project-thumb" aria-hidden="true">
+                        <div class="project-window image-frame">
+                            <img class="project-screenshot" src="assets/portfolio/gardeners-dream.jpg"
+                                alt="Gardeners Dream ecommerce storefront screenshot">
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <div class="eyebrow">Ecommerce</div>
+                        <h3>Gardeners Dream</h3>
+                        <p>
+                            Ecommerce storefront focused on product presentation and a clearer buying path.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card portfolio-card">
+                    <div class="project-thumb" aria-hidden="true">
+                        <div class="project-window image-frame">
+                            <img class="project-screenshot" src="assets/portfolio/strongcell.jpg"
+                                alt="StrongCell ecommerce homepage screenshot">
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <div class="eyebrow">Shopify</div>
+                        <h3>StrongCell</h3>
+                        <p>
+                            Subscription storefront focused on clearer purchase flow and customer confidence.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card portfolio-card">
+                    <div class="project-thumb" aria-hidden="true">
+                        <div class="project-window image-frame">
+                            <img class="project-screenshot" src="assets/portfolio/stengrossen.jpg"
+                                alt="Stengrossen ecommerce homepage screenshot">
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <div class="eyebrow">Ecommerce</div>
+                        <h3>Stengrossen</h3>
+                        <p>
+                            Ecommerce storefront focused on product presentation and performance-minded structure.
+                        </p>
+                    </div>
+                </div>
             </div>
 
+            <div class="cta-row">
+                <a class="btn primary" href="#portfolio">View Portfolio</a>
+            </div>
         </div>
     </section>
+
+    <section class="section dark" id="contact">
+        <div class="container">
+            <div class="contact-wrap">
+                <div class="contact-copy">
+                    <div class="eyebrow">Contact</div>
+                    <h2>Book a Consultation</h2>
+                    <p>
+                        Tell us about your website, store, or project. We'll review your inquiry and follow up to
+                        discuss the project.
+                    </p>
+                    <ul class="bullets">
+                        <li>New websites</li>
+                        <li>Website redesigns</li>
+                        <li>Shopify store builds</li>
+                        <li>Migrations from WooCommerce, Magento, Wix, Squarespace, and other platforms</li>
+                    </ul>
+                    <div class="contact-reassurance">
+                        <h3>What happens next</h3>
+                        <ul>
+                            <li>We review your website, store, or project.</li>
+                            <li>We discuss the project and whether PRIZIX is the right fit.</li>
+                            <li>If PRIZIX is not the right fit, we will say so.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="form-panel">
+                    <form id="contact-form">
+
+                        <div class="form-grid">
+                            <input type="text" class="field" name="from_name" placeholder="Name">
+                            <input type="text" class="field" name="company" placeholder="Company">
+                            <input type="text" class="field" name="website" placeholder="Website">
+                            <input type="email" class="field" name="reply_to" placeholder="Email">
+
+                        </div>
+
+                        <textarea class="field" name="message" rows="6"
+                            placeholder="What are you trying to improve (launch, rebuild, migration, performance, conversion...)"
+                            required></textarea>
+
+                        <div class="form-actions">
+                            <button id="contact-submit" type="submit" class="btn primary">Send</button>
+                            <div class="form-note">
+                                We'll follow up to learn more about your project.
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div>PRIZIX</div>
+                <div class="footer-links">
+                    <a href="#top">Home</a>
+                    <a href="#solutions">Solutions</a>
+                    <a href="#portfolio">Portfolio</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
