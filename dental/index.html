@@ -1,0 +1,1002 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dental Practice Ownership Transition Cleanup | PRIZIX</title>
+    <meta name="description"
+        content="PRIZIX helps dentists who acquire established practices clean up outdated owner, practice, directory, domain and online identity information after the transition." />
+    <link rel="canonical" href="https://prizix.com/dental/" />
+    <meta property="og:title" content="Dental Practice Ownership Transition Cleanup | PRIZIX" />
+    <meta property="og:description"
+        content="PRIZIX helps dentists who acquire established practices clean up outdated owner, practice, directory, domain and online identity information after the transition." />
+    <meta property="og:image" content="https://prizix.com/prizix-social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="PRIZIX — Technology changes. Good business thinking doesn’t." />
+    <meta property="og:url" content="https://prizix.com/dental/" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Dental Practice Ownership Transition Cleanup | PRIZIX" />
+    <meta name="twitter:description"
+        content="PRIZIX helps dentists who acquire established practices clean up outdated owner, practice, directory, domain and online identity information after the transition." />
+    <meta name="twitter:image" content="https://prizix.com/prizix-social-preview.png" />
+    <meta name="twitter:image:alt" content="PRIZIX — Technology changes. Good business thinking doesn’t." />
+
+    <style>
+        :root {
+            --bg: #FEFDFB;
+            --surface: #ffffff;
+            --surface-alt: #F7F3EF;
+            --mist: #FCFBF8;
+            --ink: #15191d;
+            --muted: #655f5a;
+            --soft: #93887f;
+            --line: #e8e1dc;
+            --accent: #8C5138;
+            --accent-2: #9B6043;
+            --accent-soft: #BA8568;
+            --shadow: 0 18px 48px rgba(58, 38, 28, .12);
+            --r-lg: 12px;
+            --r-md: 9px;
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            margin: 0;
+            color: var(--ink);
+            font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Helvetica Neue", Helvetica, sans-serif;
+            background:
+                linear-gradient(180deg, rgba(252, 251, 248, .88), rgba(254, 253, 251, 0) 34%),
+                var(--bg);
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none
+        }
+
+        .container {
+            width: min(1160px, calc(100% - 48px));
+            margin: 0 auto
+        }
+
+        .nav {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            border-bottom: 1px solid rgba(21, 25, 29, .08);
+            background: rgba(254, 253, 251, .92);
+            backdrop-filter: blur(14px);
+        }
+
+        .nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 22px;
+            padding: 16px 0;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+            font-size: 18px;
+            font-weight: 900;
+            letter-spacing: .12em;
+        }
+
+        .brand-dot {
+            width: 18px;
+            height: 18px;
+            border-radius: 5px;
+            background: linear-gradient(135deg, var(--accent), var(--accent-2));
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            color: var(--muted);
+            font-size: 15px;
+            font-weight: 700;
+        }
+
+        .nav-links a {
+            padding: 9px 12px;
+            border-radius: 999px;
+        }
+
+        .nav-links a:hover {
+            background: rgba(127, 75, 54, .08);
+            color: var(--ink);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 46px;
+            padding: 0 18px;
+            border-radius: 10px;
+            border: 1px solid var(--line);
+            background: var(--surface);
+            color: var(--ink);
+            font-size: 15px;
+            font-weight: 800;
+            transition: transform 160ms ease, background 160ms ease, border-color 160ms ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-1px);
+            border-color: rgba(127, 75, 54, .42);
+        }
+
+        .btn.primary {
+            border-color: var(--accent);
+            background: var(--accent);
+            color: #fff;
+        }
+
+        .btn.primary:hover {
+            border-color: var(--accent-2);
+            background: var(--accent-2);
+        }
+
+        .btn.ghost {
+            background: rgba(255, 255, 255, .52);
+        }
+
+        h1,
+        h2,
+        h3,
+        p {
+            margin-top: 0
+        }
+
+        h1,
+        h2 {
+            font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+            font-weight: 740;
+        }
+
+        h1 {
+            max-width: 790px;
+            margin-bottom: 18px;
+            font-size: clamp(43px, 5vw, 68px);
+            line-height: 1;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            font-size: clamp(34px, 3.2vw, 48px);
+            line-height: 1.06;
+        }
+
+        h3 {
+            margin-bottom: 10px;
+            font-size: 21px;
+            line-height: 1.18;
+            font-weight: 850;
+        }
+
+        .hero {
+            padding: 82px 0 62px;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(340px, .78fr);
+            gap: 52px;
+            align-items: center;
+        }
+
+        .kicker,
+        .eyebrow {
+            color: var(--accent);
+            font-size: 13px;
+            font-weight: 850;
+            letter-spacing: .13em;
+            text-transform: uppercase;
+        }
+
+        .kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 18px;
+        }
+
+        .kdot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--accent);
+        }
+
+        .sub,
+        .section-lead {
+            color: var(--muted);
+            line-height: 1.62;
+        }
+
+        .sub {
+            max-width: 750px;
+            margin-bottom: 0;
+            font-size: clamp(18px, 1.42vw, 21px);
+        }
+
+        .section-lead {
+            margin-bottom: 0;
+            font-size: clamp(17px, 1.25vw, 20px);
+        }
+
+        .hero-ctas,
+        .cta-row {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-top: 26px;
+        }
+
+        .scope-row {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-top: 18px;
+        }
+
+        .scope-pill {
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            background: rgba(255, 255, 255, .44);
+            color: var(--soft);
+            padding: 7px 10px;
+            font-size: 13px;
+            font-weight: 750;
+        }
+
+        .handoff-panel {
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            background: rgba(255, 255, 255, .72);
+            padding: 28px;
+            box-shadow: 0 18px 48px rgba(58, 38, 28, .09);
+        }
+
+        .handoff-panel h2 {
+            margin-bottom: 18px;
+            font-size: clamp(28px, 2.5vw, 38px);
+            line-height: 1.05;
+        }
+
+        .signal-stack {
+            display: grid;
+            gap: 10px;
+        }
+
+        .signal-row {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 10px;
+            align-items: start;
+            border: 1px solid var(--line);
+            border-radius: var(--r-md);
+            background: rgba(255, 255, 255, .7);
+            padding: 12px 13px;
+            color: var(--ink);
+            font-size: 15px;
+            font-weight: 800;
+        }
+
+        .signal-row::before {
+            content: "";
+            width: 8px;
+            height: 8px;
+            margin-top: 7px;
+            border-radius: 50%;
+            background: var(--accent);
+        }
+
+        .panel-note {
+            margin: 0;
+            color: var(--muted);
+            font-size: 15px;
+            line-height: 1.55;
+        }
+
+        .section {
+            padding: 82px 0;
+        }
+
+        .section.dark {
+            color: var(--ink);
+            background: var(--mist);
+        }
+
+        .section-head {
+            max-width: 850px;
+            margin-bottom: 24px;
+        }
+
+        .split {
+            display: grid;
+            grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr);
+            gap: 28px;
+            align-items: start;
+        }
+
+        .lead-box {
+            border: 1px solid var(--line);
+            border-radius: var(--r-lg);
+            background: rgba(255, 255, 255, .78);
+            padding: 30px;
+            box-shadow: 0 18px 42px rgba(33, 48, 44, .06);
+        }
+
+        .lead-box p {
+            margin-bottom: 0;
+            color: var(--muted);
+            font-size: clamp(20px, 1.7vw, 25px);
+            line-height: 1.58;
+        }
+
+        .inherit-grid,
+        .grid-3,
+        .grid-4,
+        .process-grid {
+            display: grid;
+            gap: 18px;
+        }
+
+        .inherit-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .grid-3 {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .grid-4,
+        .process-grid {
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+
+        .card {
+            border: 1px solid var(--line);
+            border-radius: var(--r-lg);
+            background: rgba(255, 255, 255, .78);
+            padding: 24px;
+            box-shadow: 0 12px 32px rgba(33, 48, 44, .06);
+        }
+
+        .dark .card {
+            border-color: rgba(21, 25, 29, .08);
+            background: rgba(255, 255, 255, .66);
+            box-shadow: 0 10px 28px rgba(33, 48, 44, .05);
+        }
+
+        .card-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .card-num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 38px;
+            height: 30px;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            color: var(--accent);
+            font-size: 12px;
+            font-weight: 850;
+            letter-spacing: .12em;
+        }
+
+        .card p {
+            margin-bottom: 0;
+            color: var(--muted);
+            font-size: 16px;
+            line-height: 1.62;
+        }
+
+        .card p + .bullets {
+            margin-top: 14px;
+        }
+
+        .bullets,
+        .plain-list {
+            margin: 0;
+            padding-left: 18px;
+            color: var(--muted);
+            font-size: 15px;
+            line-height: 1.55;
+        }
+
+        .bullets li,
+        .plain-list li {
+            margin: 6px 0
+        }
+
+        .identity-board {
+            display: grid;
+            gap: 12px;
+        }
+
+        .identity-row {
+            display: grid;
+            grid-template-columns: 158px 1fr;
+            gap: 12px;
+            align-items: stretch;
+        }
+
+        .identity-label,
+        .identity-value {
+            border: 1px solid var(--line);
+            border-radius: var(--r-md);
+            background: rgba(255, 255, 255, .72);
+            padding: 13px 14px;
+            font-size: 15px;
+            line-height: 1.45;
+        }
+
+        .identity-label {
+            color: var(--accent);
+            font-weight: 850;
+        }
+
+        .identity-value {
+            color: var(--muted);
+        }
+
+        .not-box {
+            border: 1px solid var(--line);
+            border-radius: var(--r-lg);
+            background: rgba(255, 255, 255, .78);
+            padding: 28px;
+        }
+
+        .fit-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(0, .8fr);
+            gap: 18px;
+        }
+
+        .fit-note,
+        .credibility-note {
+            margin: 18px 0 0;
+            color: var(--muted);
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .contact-wrap {
+            display: grid;
+            grid-template-columns: .86fr 1.14fr;
+            gap: 28px;
+            align-items: start;
+        }
+
+        .contact-copy {
+            border: 1px solid var(--line);
+            border-radius: var(--r-lg);
+            background: rgba(255, 255, 255, .68);
+            padding: 24px;
+        }
+
+        .contact-copy p {
+            color: var(--muted);
+            line-height: 1.65;
+        }
+
+        .contact-reassurance {
+            margin-top: 22px;
+            border: 1px solid var(--line);
+            border-radius: var(--r-md);
+            background: rgba(255, 255, 255, .72);
+            padding: 18px;
+        }
+
+        .contact-reassurance h3 {
+            margin: 0 0 10px;
+            font-size: 17px;
+            line-height: 1.25;
+        }
+
+        .contact-reassurance ul {
+            margin: 0;
+            padding-left: 18px;
+            color: var(--muted);
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .contact-reassurance li {
+            margin: 6px 0;
+        }
+
+        .form-panel {
+            border-radius: var(--r-lg);
+            border: 1px solid var(--line);
+            background: rgba(255, 255, 255, .78);
+            padding: 18px;
+            box-shadow: 0 12px 32px rgba(33, 48, 44, .06);
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 12px
+        }
+
+        .field {
+            width: 100%;
+            border-radius: 10px;
+            border: 1px solid var(--line);
+            background: rgba(255, 255, 255, .86);
+            color: var(--ink);
+            padding: 12px 12px;
+            font-size: 15px;
+            outline: none;
+        }
+
+        .field::placeholder {
+            color: var(--soft)
+        }
+
+        textarea.field {
+            margin-top: 12px;
+            resize: vertical
+        }
+
+        .form-actions {
+            margin-top: 12px;
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            flex-wrap: wrap
+        }
+
+        .form-note {
+            font-size: 14px;
+            color: var(--muted)
+        }
+
+        .footer {
+            border-top: 1px solid rgba(23, 23, 23, .10);
+            padding: 28px 0;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            gap: 18px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 980px) {
+            .hero-grid,
+            .split,
+            .contact-wrap,
+            .fit-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .grid-4,
+            .process-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .grid-3,
+            .inherit-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 720px) {
+            .container {
+                width: min(1160px, calc(100% - 32px));
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .nav .btn {
+                min-height: 40px;
+                padding: 0 14px;
+                font-size: 14px;
+            }
+
+            .hero {
+                padding: 48px 0 34px;
+            }
+
+            h1 {
+                font-size: 41px;
+            }
+
+            .section {
+                padding: 54px 0;
+            }
+
+            .grid-4,
+            .process-grid,
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .identity-row {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+            }
+        }
+    </style>
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Practice Handoff Cleanup",
+            "provider": {
+                "@type": "Organization",
+                "name": "PRIZIX",
+                "url": "https://prizix.com/"
+            },
+            "areaServed": "United States",
+            "audience": {
+                "@type": "Audience",
+                "audienceType": "Independent dentists who acquired established dental practices"
+            },
+            "description": "Post-acquisition digital handoff cleanup for dentists who bought established practices and inherited outdated owner, doctor, domain, directory or booking information."
+        }
+    </script>
+</head>
+
+<body>
+    <div class="nav">
+        <div class="container">
+            <div class="nav-inner">
+                <a class="brand" href="/" aria-label="PRIZIX home">
+                    <span class="brand-dot"></span>
+                    <span>PRIZIX</span>
+                </a>
+
+                <div class="nav-links" aria-label="Primary navigation">
+                    <a href="/">Home</a>
+                    <a href="#problems">Problems</a>
+                    <a href="#service">Service</a>
+                    <a href="#fit">Fit</a>
+                    <a href="#contact">Contact</a>
+                </div>
+
+                <div class="nav-cta">
+                    <a class="btn primary" href="#contact">Talk to PRIZIX</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="hero" id="top">
+        <div class="container">
+            <div class="hero-grid">
+                <div>
+                    <div class="kicker"><span class="kdot"></span> For Dental Practice Owners</div>
+                    <h1>You bought the practice. Did the digital presence actually transfer with it?</h1>
+                    <p class="sub">
+                        When a dental practice changes hands, the website may be updated while directories, doctor
+                        profiles, reviews, old domains and other online references still point to the previous owner.
+                        PRIZIX finds those gaps and cleans up the digital handoff.
+                    </p>
+                    <div class="hero-ctas">
+                        <a class="btn primary" href="#contact">Talk to PRIZIX</a>
+                    </div>
+                    <div class="scope-row" aria-label="Practice handoff cleanup scope">
+                        <span class="scope-pill">Owner clarity</span>
+                        <span class="scope-pill">Doctor profiles</span>
+                        <span class="scope-pill">Directories</span>
+                        <span class="scope-pill">Domains &amp; booking paths</span>
+                    </div>
+                </div>
+
+                <div class="handoff-panel" aria-label="Practice handoff signals">
+                    <h2>The handoff can be complete legally and still look unfinished online.</h2>
+                    <div class="signal-stack">
+                        <div class="signal-row">The former dentist appears as the current provider.</div>
+                        <div class="signal-row">Old and new practice names overlap.</div>
+                        <div class="signal-row">Reviews remain attached to the old identity.</div>
+                        <div class="signal-row">Directories or booking links point to outdated paths.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="section dark" id="problems">
+        <div class="container">
+            <div class="section-head">
+                <h2>The business changed hands. The online footprint may not have.</h2>
+                <p class="section-lead">
+                    Buying an established practice means inheriting more than patients and equipment. You also inherit
+                    years of listings, reviews, doctor profiles, domains and other public information. Some of that
+                    history is valuable. Some of it becomes inaccurate after the sale.
+                </p>
+            </div>
+
+            <div class="grid-4">
+                <div class="card">
+                    <div class="card-top"><span class="card-num">01</span></div>
+                    <h3>Former owner still looks current</h3>
+                    <p>Directories or provider pages still present the seller as the dentist associated with the
+                        practice.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-top"><span class="card-num">02</span></div>
+                    <h3>Old and new identities overlap</h3>
+                    <p>Practice names, domains or ownership information differ across public sources.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-top"><span class="card-num">03</span></div>
+                    <h3>Reputation stays tied to the old identity</h3>
+                    <p>Reviews and established profiles may still be attached to the former dentist or legacy practice.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-top"><span class="card-num">04</span></div>
+                    <h3>Patients reach outdated information</h3>
+                    <p>Old websites, booking links, contact details or provider pages continue appearing in search.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="service">
+        <div class="container">
+            <div class="section-head">
+                <div class="eyebrow">Practice Handoff Cleanup</div>
+                <h2>We clean up the handoff without throwing away the history you bought.</h2>
+                <p class="section-lead">
+                    PRIZIX helps preserve legitimate reputation and continuity while making current ownership, current
+                    doctors and current contact paths clear.
+                </p>
+            </div>
+
+            <div class="grid-3">
+                <div class="card">
+                    <div class="card-top"><span class="card-num">01</span></div>
+                    <h3>Map the existing footprint</h3>
+                    <p>Identify the current practice, prior owner, domains, doctor profiles, major listings and review
+                        properties.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-top"><span class="card-num">02</span></div>
+                    <h3>Find conflicting information</h3>
+                    <p>Identify mismatched ownership, doctor rosters, names, domains, addresses and contact paths.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-top"><span class="card-num">03</span></div>
+                    <h3>Fix what the practice controls</h3>
+                    <p>Correct agreed website content, doctor positioning, metadata, links, redirects and structured
+                        information where access allows.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-top"><span class="card-num">04</span></div>
+                    <h3>Address major third-party listings</h3>
+                    <p>Submit or make appropriate corrections to major public profiles and provider listings.
+                        Third-party platforms control whether and when their information changes.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-top"><span class="card-num">05</span></div>
+                    <h3>Preserve and verify</h3>
+                    <p>Protect legitimate review and history value, then document what was corrected, submitted and
+                        still pending.</p>
+                </div>
+            </div>
+
+            <div class="cta-row">
+                <a class="btn primary" href="#contact">Talk to PRIZIX</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section dark" id="not">
+        <div class="container">
+            <div class="not-box">
+                <div class="section-head">
+                    <h2>This isn’t a website redesign or another marketing retainer.</h2>
+                    <p class="section-lead">
+                        Your website may already be perfectly good. The problem often exists around it—in the public
+                        footprint the practice built before ownership changed.
+                    </p>
+                </div>
+
+                <div class="grid-3">
+                    <div class="card">
+                        <h3>Focused scope</h3>
+                        <p>Post-acquisition digital handoff cleanup.</p>
+                    </div>
+                    <div class="card">
+                        <h3>No unnecessary extras</h3>
+                        <ul class="plain-list">
+                            <li>No paid ads</li>
+                            <li>No social-media management</li>
+                            <li>No unnecessary rebranding</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>No fake guarantees</h3>
+                        <ul class="plain-list">
+                            <li>No guaranteed rankings</li>
+                            <li>No guaranteed patient counts</li>
+                            <li>No guaranteed third-party update timelines</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section dark" id="process">
+        <div class="container">
+            <div class="section-head">
+                <h2>A clear process for a messy handoff</h2>
+            </div>
+
+            <div class="grid-3">
+                <div class="card">
+                    <div class="card-top"><span class="card-num">01</span></div>
+                    <h3>We inspect the transition</h3>
+                    <p>PRIZIX maps how the practice, doctors and legacy identities currently appear online.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-top"><span class="card-num">02</span></div>
+                    <h3>We clean up what matters</h3>
+                    <p>We fix agreed first-party issues and submit appropriate third-party corrections.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-top"><span class="card-num">03</span></div>
+                    <h3>You get a clear handoff record</h3>
+                    <p>You receive documentation of what changed, what was submitted and anything still dependent on
+                        outside platforms.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section dark" id="contact">
+        <div class="container">
+            <div class="contact-wrap">
+                <div class="contact-copy">
+                    <div class="eyebrow">Contact</div>
+                    <h2>Not sure whether your practice made a clean digital transition?</h2>
+                    <p>
+                        If you recently bought an established dental practice, send us the practice name and website.
+                        We’ll take a look at how the old and new identities appear online and follow up if we see
+                        something worth discussing.
+                    </p>
+                    <p class="credibility-note">
+                        PRIZIX is a digital business consultancy focused on websites, online operations and how
+                        businesses are represented across search and AI-driven discovery.
+                    </p>
+                </div>
+
+                <div class="form-panel">
+                    <form id="contact-form">
+                        <div class="form-grid">
+                            <input type="text" class="field" name="from_name" placeholder="Name">
+                            <input type="text" class="field" name="company" placeholder="Practice name">
+                            <input type="text" class="field" name="website" placeholder="Practice website">
+                            <input type="email" class="field" name="reply_to" placeholder="Email">
+                        </div>
+
+                        <textarea class="field" name="message" rows="6"
+                            placeholder="Tell us what changed: who bought the practice, the previous owner or practice name, and what looks inconsistent online."
+                            required></textarea>
+
+                        <div class="form-actions">
+                            <button id="contact-submit" type="submit" class="btn primary">Contact PRIZIX</button>
+                            <div class="form-note">
+                                We’ll follow up after reviewing the practice handoff.
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div>PRIZIX</div>
+                <div class="footer-links">
+                    <a href="/">Home</a>
+                    <a href="#problems">Problems</a>
+                    <a href="#service">Service</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script>
+        (function () {
+            const PUBLIC_KEY = "wVP3zJmzfenZKTdCK";
+            const SERVICE_ID = "service_53rotdr";
+            const TEMPLATE_ID = "template_oas5l2v";
+
+            emailjs.init({ publicKey: PUBLIC_KEY });
+
+            const form = document.getElementById("contact-form");
+            const btn = document.getElementById("contact-submit");
+
+            form.addEventListener("submit", function (e) {
+                e.preventDefault();
+
+                btn.disabled = true;
+                const originalText = btn.textContent;
+                btn.textContent = "Sending...";
+
+                emailjs
+                    .sendForm(SERVICE_ID, TEMPLATE_ID, form)
+                    .then(function (result) {
+                        console.log("EmailJS success:", result);
+                        alert("Sent!");
+                        form.reset();
+                    })
+                    .catch(function (error) {
+                        console.error("EmailJS error:", error);
+                        alert("Not sent. Check Console.");
+
+                        if (error && error.text) console.error("EmailJS error.text:", error.text);
+                    })
+                    .finally(function () {
+                        btn.disabled = false;
+                        btn.textContent = originalText;
+                    });
+            });
+        })();
+    </script>
+</body>
+
+</html>
