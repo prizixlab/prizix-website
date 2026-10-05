@@ -1,0 +1,1205 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Estimate | PRIZIX</title>
+    <meta name="description"
+        content="Get a practical ballpark estimate for a PRIZIX website, Shopify, ecommerce migration, AI, or digital business improvement project." />
+    <link rel="canonical" href="https://prizix.com/estimate/" />
+    <meta property="og:title" content="Project Estimate | PRIZIX" />
+    <meta property="og:description"
+        content="Get a practical ballpark estimate for a PRIZIX website, Shopify, ecommerce migration, AI, or digital business improvement project." />
+    <meta property="og:image" content="https://prizix.com/prizix-social-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="PRIZIX — Technology changes. Good business thinking doesn’t." />
+    <meta property="og:url" content="https://prizix.com/estimate/" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Project Estimate | PRIZIX" />
+    <meta name="twitter:description"
+        content="Get a practical ballpark estimate for a PRIZIX website, Shopify, ecommerce migration, AI, or digital business improvement project." />
+    <meta name="twitter:image" content="https://prizix.com/prizix-social-preview.png" />
+    <meta name="twitter:image:alt" content="PRIZIX — Technology changes. Good business thinking doesn’t." />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "PRIZIX Project Estimate",
+            "url": "https://prizix.com/estimate/",
+            "description": "A practical project estimator for websites, Shopify, ecommerce migrations, AI implementation, and digital business improvements.",
+            "isPartOf": {
+                "@type": "WebSite",
+                "name": "PRIZIX",
+                "url": "https://prizix.com/"
+            }
+        }
+    </script>
+    <style>
+        :root {
+            --bg: #FEFDFB;
+            --surface: #ffffff;
+            --surface-alt: #F7F3EF;
+            --mist: #FCFBF8;
+            --ink: #15191d;
+            --muted: #655f5a;
+            --soft: #93887f;
+            --line: #e8e1dc;
+            --dark: #2a211d;
+            --dark-muted: #73675f;
+            --accent: #8C5138;
+            --accent-2: #9B6043;
+            --accent-soft: #BA8568;
+            --shadow: 0 18px 48px rgba(58, 38, 28, .12);
+            --r-xl: 18px;
+            --r-lg: 12px;
+            --r-md: 9px;
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            margin: 0;
+            color: var(--ink);
+            font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Helvetica Neue", Helvetica, sans-serif;
+            background:
+                linear-gradient(180deg, rgba(252, 251, 248, .86), rgba(254, 253, 251, 0) 34%),
+                var(--bg);
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none
+        }
+
+        .container {
+            width: min(1160px, calc(100% - 48px));
+            margin: 0 auto
+        }
+
+        .nav {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            border-bottom: 1px solid rgba(21, 25, 29, .08);
+            background: rgba(254, 253, 251, .92);
+            backdrop-filter: blur(14px);
+        }
+
+        .nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 22px;
+            padding: 16px 0;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+            font-size: 18px;
+            font-weight: 900;
+            letter-spacing: .12em;
+        }
+
+        .brand-dot {
+            width: 18px;
+            height: 18px;
+            border-radius: 5px;
+            background: linear-gradient(135deg, var(--accent), var(--accent-2));
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            color: var(--muted);
+            font-size: 15px;
+            font-weight: 700;
+        }
+
+        .nav-links a {
+            padding: 9px 12px;
+            border-radius: 999px;
+        }
+
+        .nav-links a:hover {
+            background: rgba(127, 75, 54, .08);
+            color: var(--ink);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 46px;
+            padding: 0 18px;
+            border-radius: 10px;
+            border: 1px solid var(--line);
+            background: var(--surface);
+            color: var(--ink);
+            font-size: 15px;
+            font-weight: 800;
+            cursor: pointer;
+            transition: transform 160ms ease, background 160ms ease, border-color 160ms ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-1px);
+            border-color: rgba(127, 75, 54, .42);
+        }
+
+        .btn.primary {
+            border-color: var(--accent);
+            background: var(--accent);
+            color: #fff;
+        }
+
+        .btn.primary:hover {
+            border-color: var(--accent-2);
+            background: var(--accent-2);
+        }
+
+        .btn.primary:disabled {
+            opacity: .48;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .btn.ghost {
+            background: rgba(255, 255, 255, .52);
+        }
+
+        .hero {
+            padding: 74px 0 48px;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(320px, .64fr);
+            gap: 48px;
+            align-items: stretch;
+        }
+
+        .kicker,
+        .eyebrow {
+            color: var(--accent);
+            font-size: 12px;
+            font-weight: 850;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+        }
+
+        .kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 18px;
+        }
+
+        .kdot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--accent);
+        }
+
+        h1,
+        h2,
+        h3,
+        p {
+            margin-top: 0
+        }
+
+        h1,
+        h2 {
+            font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+            letter-spacing: -0.04em;
+            font-weight: 740;
+        }
+
+        h1 {
+            max-width: 760px;
+            margin-bottom: 18px;
+            font-size: clamp(44px, 5vw, 70px);
+            line-height: 1;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            font-size: clamp(32px, 3vw, 46px);
+            line-height: 1.06;
+        }
+
+        h3 {
+            margin-bottom: 10px;
+            font-size: 21px;
+            line-height: 1.18;
+            letter-spacing: -0.02em;
+            font-weight: 850;
+        }
+
+        .sub {
+            max-width: 720px;
+            margin-bottom: 0;
+            color: var(--muted);
+            font-size: clamp(18px, 1.35vw, 21px);
+            line-height: 1.62;
+        }
+
+        .section {
+            padding: 72px 0;
+        }
+
+        .card,
+        .estimate-shell {
+            border: 1px solid var(--line);
+            border-radius: var(--r-lg);
+            background: rgba(255, 255, 255, .78);
+            box-shadow: 0 12px 32px rgba(33, 48, 44, .06);
+        }
+
+        .hero-panel {
+            padding: 28px;
+        }
+
+        .hero-panel ul {
+            display: grid;
+            gap: 12px;
+            margin: 18px 0 0;
+            padding: 0;
+            list-style: none;
+            color: var(--muted);
+            line-height: 1.5;
+        }
+
+        .hero-panel li {
+            display: grid;
+            grid-template-columns: 10px 1fr;
+            gap: 12px;
+        }
+
+        .hero-panel li::before {
+            content: "";
+            width: 8px;
+            height: 8px;
+            margin-top: 8px;
+            border-radius: 50%;
+            background: var(--accent);
+        }
+
+        .hero-ctas,
+        .cta-row,
+        .step-nav,
+        .form-actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .hero-ctas {
+            margin-top: 26px;
+        }
+
+        .estimate-shell {
+            overflow: hidden;
+        }
+
+        .progress {
+            height: 7px;
+            background: #ece7e1;
+        }
+
+        .progress-bar {
+            width: 20%;
+            height: 100%;
+            background: var(--accent);
+            transition: width 180ms ease;
+        }
+
+        .estimator-content {
+            padding: 34px;
+        }
+
+        .step {
+            display: none;
+        }
+
+        .step.active {
+            display: block;
+        }
+
+        .step small {
+            color: var(--soft);
+            font-size: 12px;
+            font-weight: 850;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+        }
+
+        .option-grid,
+        .check-grid {
+            display: grid;
+            gap: 14px;
+            margin-top: 24px;
+        }
+
+        .option-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .check-grid {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .option,
+        .check-option {
+            width: 100%;
+            min-height: 112px;
+            border: 1px solid var(--line);
+            border-radius: var(--r-md);
+            background: rgba(255, 255, 255, .82);
+            color: var(--ink);
+            padding: 18px;
+            text-align: left;
+            cursor: pointer;
+            transition: transform 160ms ease, border-color 160ms ease, background 160ms ease;
+        }
+
+        .check-option {
+            min-height: 88px;
+        }
+
+        .option:hover,
+        .check-option:hover {
+            transform: translateY(-1px);
+            border-color: rgba(127, 75, 54, .42);
+        }
+
+        .option.selected,
+        .check-option.selected {
+            border-color: var(--accent);
+            background:
+                linear-gradient(180deg, rgba(140, 81, 56, .08), rgba(255, 255, 255, .9)),
+                #fff;
+            box-shadow: inset 0 0 0 1px var(--accent);
+        }
+
+        .option b,
+        .check-option b {
+            display: block;
+            margin-bottom: 6px;
+            font-size: 17px;
+            line-height: 1.25;
+        }
+
+        .option span,
+        .check-option span {
+            display: block;
+            color: var(--muted);
+            font-size: 14px;
+            line-height: 1.45;
+        }
+
+        .step-nav {
+            justify-content: space-between;
+            margin-top: 28px;
+        }
+
+        .result-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1.04fr) minmax(0, .96fr);
+            gap: 22px;
+            align-items: start;
+        }
+
+        .result-card {
+            border: 1px solid var(--line);
+            border-radius: var(--r-lg);
+            background: rgba(255, 255, 255, .78);
+            padding: 26px;
+        }
+
+        .tag {
+            display: inline-flex;
+            margin-bottom: 14px;
+            border-radius: 999px;
+            background: rgba(140, 81, 56, .10);
+            color: var(--accent);
+            padding: 8px 11px;
+            font-size: 12px;
+            font-weight: 850;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+        }
+
+        .estimate-price {
+            margin: 8px 0 18px;
+            font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+            font-size: clamp(38px, 4vw, 56px);
+            font-weight: 760;
+            letter-spacing: -0.045em;
+            line-height: 1;
+        }
+
+        .meta-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 10px;
+            margin-top: 18px;
+        }
+
+        .meta-grid div {
+            border: 1px solid var(--line);
+            border-radius: var(--r-md);
+            background: rgba(252, 251, 248, .86);
+            padding: 14px;
+        }
+
+        .note {
+            color: var(--muted);
+            font-size: 13px;
+            line-height: 1.45;
+        }
+
+        .meta-grid strong {
+            display: block;
+            margin-top: 3px;
+        }
+
+        .drivers {
+            margin: 14px 0 0;
+            padding-left: 18px;
+            color: var(--muted);
+            font-size: 15px;
+            line-height: 1.55;
+        }
+
+        .drivers li {
+            margin: 6px 0;
+        }
+
+        .lead-panel {
+            display: none;
+            margin-top: 22px;
+            border-top: 1px solid var(--line);
+            padding-top: 22px;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px;
+        }
+
+        .field {
+            width: 100%;
+            border-radius: 10px;
+            border: 1px solid var(--line);
+            background: rgba(255, 255, 255, .86);
+            color: var(--ink);
+            padding: 12px 12px;
+            font: inherit;
+            font-size: 15px;
+            outline: none;
+        }
+
+        .field::placeholder {
+            color: var(--soft);
+        }
+
+        textarea.field {
+            margin-top: 12px;
+            resize: vertical;
+        }
+
+        .form-actions {
+            margin-top: 12px;
+        }
+
+        .form-message {
+            display: none;
+            margin-top: 12px;
+            color: var(--muted);
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .footer {
+            border-top: 1px solid rgba(23, 23, 23, .10);
+            padding: 28px 0;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            gap: 18px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 980px) {
+            .hero-grid,
+            .result-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .check-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 720px) {
+            .container {
+                width: min(1160px, calc(100% - 32px));
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .nav .btn {
+                min-height: 40px;
+                padding: 0 14px;
+                font-size: 14px;
+            }
+
+            .hero {
+                padding: 48px 0 34px;
+            }
+
+            h1 {
+                font-size: 42px;
+            }
+
+            .section {
+                padding: 54px 0;
+            }
+
+            .estimator-content,
+            .result-card,
+            .hero-panel {
+                padding: 20px;
+            }
+
+            .option-grid,
+            .check-grid,
+            .form-grid,
+            .meta-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <div class="container">
+            <div class="nav-inner">
+                <a class="brand" href="/" aria-label="PRIZIX home">
+                    <span class="brand-dot"></span>
+                    <span>PRIZIX</span>
+                </a>
+
+                <div class="nav-links" aria-label="Primary navigation">
+                    <a href="/">Home</a>
+                    <a href="/#solutions">Solutions</a>
+                    <a href="/#portfolio">Portfolio</a>
+                    <a href="/#contact">Contact</a>
+                </div>
+
+                <div>
+                    <a class="btn primary" href="#estimator">Start Estimate</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="hero" id="top">
+        <div class="container">
+            <div class="hero-grid">
+                <div>
+                    <div class="kicker"><span class="kdot"></span> Project Estimator</div>
+                    <h1>Get a practical project estimate before you build.</h1>
+                    <p class="sub">
+                        Answer a few focused questions for a realistic ballpark range for a website, Shopify store,
+                        migration, ecommerce improvement, AI implementation, or digital business project.
+                    </p>
+                    <div class="hero-ctas">
+                        <a class="btn primary" href="#estimator">Start Estimate</a>
+                        <a class="btn ghost" href="/">Back to Home</a>
+                    </div>
+                </div>
+
+                <aside class="card hero-panel">
+                    <div class="eyebrow">Good fit for</div>
+                    <ul>
+                        <li>New business websites and redesigns</li>
+                        <li>New Shopify stores, redesigns, and migrations</li>
+                        <li>Ecommerce, integrations, and digital improvements</li>
+                        <li>Practical AI and business workflow projects</li>
+                    </ul>
+                </aside>
+            </div>
+        </div>
+    </header>
+
+    <main class="section" id="estimator">
+        <div class="container">
+            <section class="estimate-shell" aria-label="PRIZIX project estimator">
+                <div class="progress" aria-hidden="true"><div class="progress-bar" id="progress-bar"></div></div>
+                <div class="estimator-content">
+                    <div class="step active" data-step="1">
+                        <small>1 of 5</small>
+                        <h2>What do you need help with?</h2>
+                        <p class="sub">Choose the option that best describes the project.</p>
+                        <div class="option-grid" id="type-options"></div>
+                        <div class="step-nav">
+                            <span></span>
+                            <button class="btn primary" type="button" data-next>Next</button>
+                        </div>
+                    </div>
+
+                    <div class="step" data-step="2">
+                        <small>2 of 5</small>
+                        <h2>Where are you starting?</h2>
+                        <p class="sub">This helps identify whether the work is a build, rebuild, migration, or improvement.</p>
+                        <div class="option-grid" id="stage-options"></div>
+                        <div class="step-nav">
+                            <button class="btn ghost" type="button" data-prev>Back</button>
+                            <button class="btn primary" type="button" data-next>Next</button>
+                        </div>
+                    </div>
+
+                    <div class="step" data-step="3">
+                        <small>3 of 5</small>
+                        <h2>How large is the project?</h2>
+                        <p class="sub">A rough answer is enough. This keeps the range useful without pretending to be exact.</p>
+                        <div class="option-grid" id="scope-options"></div>
+                        <div class="step-nav">
+                            <button class="btn ghost" type="button" data-prev>Back</button>
+                            <button class="btn primary" type="button" data-next>Next</button>
+                        </div>
+                    </div>
+
+                    <div class="step" data-step="4">
+                        <small>4 of 5</small>
+                        <h2>What else do you need?</h2>
+                        <p class="sub">Select everything that applies. Add-ons are capped so the estimate stays practical.</p>
+                        <div class="check-grid" id="addon-options"></div>
+                        <div class="step-nav">
+                            <button class="btn ghost" type="button" data-prev>Back</button>
+                            <button class="btn primary" type="button" data-next>Next</button>
+                        </div>
+                    </div>
+
+                    <div class="step" data-step="5">
+                        <small>5 of 5</small>
+                        <h2>When would you like to launch?</h2>
+                        <p class="sub">ASAP helps indicate urgency, but it does not automatically increase the estimate.</p>
+                        <div class="option-grid" id="timeline-options"></div>
+                        <div class="step-nav">
+                            <button class="btn ghost" type="button" data-prev>Back</button>
+                            <button class="btn primary" type="button" id="show-result">See my estimate</button>
+                        </div>
+                    </div>
+
+                    <div class="step" data-step="6">
+                        <div class="result-grid">
+                            <div class="result-card">
+                                <span class="tag">Estimate</span>
+                                <h2 id="result-title">Your project estimate</h2>
+                                <p class="sub" id="result-summary"></p>
+                                <div class="estimate-price" id="price-range">$3,000 – $6,500</div>
+                                <div class="meta-grid">
+                                    <div><span class="note">Typical timeline</span><strong id="time-range">4–8 weeks</strong></div>
+                                    <div><span class="note">Complexity</span><strong id="complexity">Moderate</strong></div>
+                                </div>
+                                <h3 style="margin-top:24px">Main cost drivers</h3>
+                                <ul class="drivers" id="drivers"></ul>
+                                <p class="note" style="margin-top:18px">
+                                    This is a preliminary range, not a binding quote. Final scope depends on content,
+                                    integrations, design requirements, migration needs, and the condition of any existing setup.
+                                </p>
+                                <div class="cta-row" style="margin-top:22px">
+                                    <button class="btn ghost" type="button" id="restart">Start over</button>
+                                </div>
+                            </div>
+
+                            <div class="result-card">
+                                <div id="fit-question">
+                                    <span class="tag">Next step</span>
+                                    <h2>Does this range work for what you had in mind?</h2>
+                                    <p class="sub">
+                                        Your answer helps PRIZIX recommend the right next step without automatically
+                                        exposing a calendar to every visitor.
+                                    </p>
+                                    <div class="option-grid" id="fit-options"></div>
+                                </div>
+
+                                <div class="lead-panel" id="lead-panel">
+                                    <h2 id="lead-title">Want a more accurate project review?</h2>
+                                    <p class="sub" id="lead-intro">
+                                        Share a few details and PRIZIX can review the estimate and recommend the sensible next step.
+                                    </p>
+                                    <form id="estimate-form">
+                                        <div class="form-grid">
+                                            <input class="field" type="text" name="from_name" placeholder="Name" required>
+                                            <input class="field" type="text" name="company" placeholder="Company">
+                                            <input class="field" type="text" name="website" placeholder="Website">
+                                            <input class="field" type="email" name="reply_to" placeholder="Email" required>
+                                        </div>
+                                        <textarea class="field" name="project_note" rows="5"
+                                            placeholder="Anything we should know about the project?"></textarea>
+                                        <input type="hidden" name="project_type" id="field-project-type">
+                                        <input type="hidden" name="project_stage" id="field-project-stage">
+                                        <input type="hidden" name="project_scope" id="field-project-scope">
+                                        <input type="hidden" name="selected_features" id="field-selected-features">
+                                        <input type="hidden" name="timeline" id="field-timeline">
+                                        <input type="hidden" name="calculated_range" id="field-calculated-range">
+                                        <input type="hidden" name="post_estimate_response" id="field-fit-response">
+                                        <input type="hidden" name="message" id="field-message">
+                                        <div class="form-actions">
+                                            <button class="btn primary" id="estimate-submit" type="submit">Request my project review</button>
+                                            <span class="note">Your estimate and answers will be included.</span>
+                                        </div>
+                                        <div class="form-message" id="form-message" role="status"></div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div>PRIZIX</div>
+                <div class="footer-links">
+                    <a href="/">Home</a>
+                    <a href="/#solutions">Solutions</a>
+                    <a href="/#portfolio">Portfolio</a>
+                    <a href="/#contact">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        const PUBLIC_KEY = "wVP3zJmzfenZKTdCK";
+        const SERVICE_ID = "service_53rotdr";
+        const TEMPLATE_ID = "template_oas5l2v";
+
+        if (window.emailjs) {
+            emailjs.init({ publicKey: PUBLIC_KEY });
+        }
+
+        const data = {
+            type: [
+                { id: "new-site", label: "New website", desc: "Build a professional business website from scratch", base: [1500, 3000], time: [2, 5], cap: 6500, result: "New Business Website" },
+                { id: "site-redesign", label: "Website redesign", desc: "Rework an outdated or underperforming website", base: [3000, 6500], time: [4, 8], cap: 7500, result: "Website Rebuild" },
+                { id: "new-shopify", label: "New Shopify store", desc: "Launch a Shopify store from scratch", base: [2500, 4500], time: [3, 7], cap: 7000, result: "Shopify Launch" },
+                { id: "shopify-redesign", label: "Shopify redesign", desc: "Improve an existing Shopify storefront", base: [3000, 6500], time: [4, 8], cap: 8000, result: "Shopify Rebuild" },
+                { id: "migration", label: "Ecommerce migration", desc: "Move from another ecommerce platform", base: [3500, 6500], time: [5, 10], cap: 9000, result: "Ecommerce Migration" },
+                { id: "custom", label: "Digital / custom project", desc: "Integrations, automation, ecommerce, AI, or another digital project", base: [3000, 6500], time: [3, 8], cap: 8500, result: "Custom Digital Project" }
+            ],
+            stage: [
+                { id: "scratch", label: "Starting from scratch", desc: "Nothing exists yet", mod: [0, 0] },
+                { id: "existing-business", label: "Existing business", desc: "The business exists but needs a new digital presence", mod: [0, 250] },
+                { id: "existing-digital", label: "Existing site or store", desc: "There is something to audit, preserve, migrate, or improve", mod: [250, 500] }
+            ],
+            scope: [
+                { id: "small", label: "Small", desc: "1–5 pages or up to 25 products", mod: [0, 0] },
+                { id: "medium", label: "Medium", desc: "6–12 pages or 26–150 products", mod: [250, 750] },
+                { id: "large", label: "Large", desc: "13–25 pages or 151–500 products", mod: [750, 1500] },
+                { id: "complex", label: "Complex", desc: "25+ pages, 500+ products, or custom functionality", mod: [1250, 2500] }
+            ],
+            addons: [
+                { id: "copy", label: "Copy / content help", mod: [250, 750] },
+                { id: "branding", label: "Branding / visual direction", mod: [250, 750] },
+                { id: "booking", label: "Booking or scheduling", mod: [0, 250] },
+                { id: "payments", label: "Payments setup", mod: [0, 250] },
+                { id: "subscriptions", label: "Subscriptions / memberships", mod: [250, 750] },
+                { id: "integrations", label: "CRM / app integrations", mod: [250, 750] },
+                { id: "migration-products", label: "Product / content migration", mod: [250, 1000] },
+                { id: "automation", label: "Automation / custom workflows", mod: [250, 1000] },
+                { id: "other", label: "Something else", mod: [0, 500] }
+            ],
+            timeline: [
+                { id: "asap", label: "ASAP", desc: "Ready to start as soon as possible", rush: 1 },
+                { id: "1-3", label: "1–3 months", desc: "Normal planning window", rush: 1 },
+                { id: "3-6", label: "3–6 months", desc: "Plenty of planning time", rush: 1 },
+                { id: "research", label: "Just researching", desc: "No fixed launch date yet", rush: 1 }
+            ],
+            fit: [
+                { id: "yes", label: "Yes", desc: "This is within the range I expected." },
+                { id: "possibly", label: "Possibly", desc: "I need to understand the scope first." },
+                { id: "higher", label: "Higher than expected", desc: "I may need a leaner first phase." },
+                { id: "researching", label: "Just researching", desc: "I am not ready to start yet." }
+            ]
+        };
+
+        let state = {
+            step: 1,
+            type: null,
+            stage: null,
+            scope: null,
+            addons: [],
+            timeline: null,
+            fit: null,
+            result: null
+        };
+
+        function byId(collection, id) {
+            return data[collection].find((item) => item.id === id);
+        }
+
+        function money(value) {
+            return "$" + (Math.round(value / 250) * 250).toLocaleString("en-US");
+        }
+
+        function renderSingle(containerId, collection, key) {
+            const container = document.getElementById(containerId);
+            container.innerHTML = data[collection].map((item) => `
+                <button class="option" type="button" data-key="${key}" data-id="${item.id}">
+                    <b>${item.label}</b>
+                    <span>${item.desc || ""}</span>
+                </button>
+            `).join("");
+        }
+
+        function renderAddons() {
+            const container = document.getElementById("addon-options");
+            container.innerHTML = data.addons.map((item) => `
+                <button class="check-option" type="button" data-id="${item.id}">
+                    <b>${item.label}</b>
+                </button>
+            `).join("");
+        }
+
+        function renderFit() {
+            const container = document.getElementById("fit-options");
+            container.innerHTML = data.fit.map((item) => `
+                <button class="option" type="button" data-fit="${item.id}">
+                    <b>${item.label}</b>
+                    <span>${item.desc}</span>
+                </button>
+            `).join("");
+        }
+
+        function showStep(step) {
+            state.step = step;
+            document.querySelectorAll(".step").forEach((section) => {
+                section.classList.toggle("active", Number(section.dataset.step) === step);
+            });
+            document.getElementById("progress-bar").style.width = ((Math.min(step, 5) / 5) * 100) + "%";
+            document.getElementById("estimator").scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+
+        function requireCurrentAnswer() {
+            const required = { 1: "type", 2: "stage", 3: "scope", 5: "timeline" };
+            const key = required[state.step];
+            if (!key || state[key]) return true;
+            alert("Please choose an option first.");
+            return false;
+        }
+
+        function calculateEstimate() {
+            const type = byId("type", state.type);
+            const stage = byId("stage", state.stage);
+            const scope = byId("scope", state.scope);
+            const timeline = byId("timeline", state.timeline);
+            const selectedAddons = data.addons.filter((addon) => state.addons.includes(addon.id));
+
+            let low = type.base[0] + stage.mod[0] + scope.mod[0];
+            let high = type.base[1] + stage.mod[1] + scope.mod[1];
+            let addonLow = 0;
+            let addonHigh = 0;
+
+            selectedAddons.forEach((addon) => {
+                addonLow += addon.mod[0];
+                addonHigh += addon.mod[1];
+            });
+
+            low += Math.min(addonLow, 1000);
+            high += Math.min(addonHigh, 2000);
+
+            low *= timeline.rush;
+            high *= timeline.rush;
+
+            if (state.scope === "small" && ["new-site", "new-shopify"].includes(state.type) && selectedAddons.length <= 1) {
+                low = Math.min(low, type.base[0] + 500);
+                high = Math.min(high, type.base[1] + 1000);
+            }
+
+            high = Math.min(high, type.cap);
+            low = Math.min(low, Math.max(type.base[0], type.cap - 2500));
+            if (low > high - 500) low = Math.max(type.base[0], high - 1500);
+
+            const complexity = state.scope === "complex" || selectedAddons.length >= 5 ? "High" :
+                state.scope === "large" || selectedAddons.length >= 3 ? "Moderate–High" :
+                    state.scope === "medium" || selectedAddons.length >= 2 ? "Moderate" : "Straightforward";
+
+            let weeksLow = type.time[0];
+            let weeksHigh = type.time[1];
+            if (state.scope === "large") {
+                weeksLow += 1;
+                weeksHigh += 2;
+            }
+            if (state.scope === "complex") {
+                weeksLow += 2;
+                weeksHigh += 4;
+            }
+            if (selectedAddons.length >= 4) weeksHigh += 2;
+
+            const drivers = [type.label, scope.label + " project scope"];
+            selectedAddons.slice(0, 4).forEach((addon) => drivers.push(addon.label));
+            if (state.stage === "existing-digital") drivers.push("Existing site/store review and preservation");
+
+            return {
+                type,
+                stage,
+                scope,
+                timeline,
+                selectedAddons,
+                low,
+                high,
+                range: money(low) + " – " + money(high),
+                timeRange: state.timeline === "asap" ? "Priority / ASAP" : weeksLow + "–" + weeksHigh + " weeks",
+                complexity,
+                drivers,
+                customReview: state.scope === "complex" || selectedAddons.length >= 5
+            };
+        }
+
+        function displayResult() {
+            if (!state.timeline) {
+                alert("Please choose an option first.");
+                return;
+            }
+
+            const result = calculateEstimate();
+            state.result = result;
+
+            const article = /^[AEIOU]/.test(result.type.result) ? "an" : "a";
+            document.getElementById("result-title").textContent = "Your project looks like " + article + " " + result.type.result;
+            document.getElementById("result-summary").textContent = result.customReview
+                ? "This project has enough moving parts that the range should stay conservative. A short review would be needed before giving a firm scope."
+                : "Based on your answers, this is the most realistic preliminary range for the project as described.";
+            document.getElementById("price-range").textContent = result.range;
+            document.getElementById("time-range").textContent = result.timeRange;
+            document.getElementById("complexity").textContent = result.complexity;
+            document.getElementById("drivers").innerHTML = result.drivers.map((driver) => `<li>${driver}</li>`).join("");
+            document.getElementById("lead-panel").style.display = "none";
+            document.querySelectorAll("#fit-options .selected").forEach((node) => node.classList.remove("selected"));
+            state.fit = null;
+            updateHiddenFields();
+            showStep(6);
+        }
+
+        function updateHiddenFields() {
+            if (!state.result) return;
+
+            const result = state.result;
+            const form = document.getElementById("estimate-form");
+            const visitorName = form?.elements.from_name.value.trim() || "Not provided";
+            const visitorEmail = form?.elements.reply_to.value.trim() || "Not provided";
+            const visitorWebsite = form?.elements.website.value.trim() || "Not provided";
+            const visitorNote = form?.elements.project_note.value.trim() || "Not provided";
+            const selectedFeatures = result.selectedAddons.length
+                ? result.selectedAddons.map((addon) => addon.label).join(", ")
+                : "No additional options selected";
+
+            const message = [
+                "PRIZIX Project Estimate",
+                "",
+                "Visitor name: " + visitorName,
+                "Visitor email: " + visitorEmail,
+                "Website: " + visitorWebsite,
+                "Visitor note: " + visitorNote,
+                "",
+                "Project type: " + result.type.label,
+                "Stage: " + result.stage.label,
+                "Scope: " + result.scope.label,
+                "Selected features: " + selectedFeatures,
+                "Timeline: " + result.timeline.label,
+                "Calculated range: " + result.range,
+                "Typical timeline: " + result.timeRange,
+                "Complexity: " + result.complexity,
+                "Post-estimate response: " + (state.fit ? byId("fit", state.fit).label : "Not selected"),
+                "Cost drivers: " + result.drivers.join(", ")
+            ].join("\\n");
+
+            document.getElementById("field-project-type").value = result.type.label;
+            document.getElementById("field-project-stage").value = result.stage.label;
+            document.getElementById("field-project-scope").value = result.scope.label;
+            document.getElementById("field-selected-features").value = selectedFeatures;
+            document.getElementById("field-timeline").value = result.timeline.label;
+            document.getElementById("field-calculated-range").value = result.range;
+            document.getElementById("field-fit-response").value = state.fit ? byId("fit", state.fit).label : "";
+            document.getElementById("field-message").value = message;
+        }
+
+        function chooseFit(value, node) {
+            state.fit = value;
+            document.querySelectorAll("#fit-options .option").forEach((option) => option.classList.remove("selected"));
+            node.classList.add("selected");
+
+            const title = document.getElementById("lead-title");
+            const intro = document.getElementById("lead-intro");
+            const submit = document.getElementById("estimate-submit");
+
+            if (value === "yes") {
+                title.textContent = "This looks like a good fit.";
+                intro.textContent = "Send the project details to PRIZIX for a more accurate review. Booking can be offered later when the fit is clear.";
+                submit.textContent = "Request my project review";
+            } else if (value === "possibly") {
+                title.textContent = "Let’s clarify the scope first.";
+                intro.textContent = "Send the project details and PRIZIX can help separate what is essential from what can wait.";
+                submit.textContent = "Review my project";
+            } else if (value === "higher") {
+                title.textContent = "We can look for a leaner first phase.";
+                intro.textContent = "Send the project details and PRIZIX can suggest what to launch first without forcing the full project at once.";
+                submit.textContent = "Show me a leaner option";
+            } else {
+                title.textContent = "Save the estimate for later.";
+                intro.textContent = "Leave your email and project details if you want PRIZIX to keep the context for when you are ready.";
+                submit.textContent = "Send me my estimate";
+            }
+
+            updateHiddenFields();
+            document.getElementById("lead-panel").style.display = "block";
+            document.getElementById("lead-panel").scrollIntoView({ behavior: "smooth", block: "nearest" });
+        }
+
+        function restart() {
+            state = { step: 1, type: null, stage: null, scope: null, addons: [], timeline: null, fit: null, result: null };
+            document.querySelectorAll(".selected").forEach((node) => node.classList.remove("selected"));
+            document.getElementById("estimate-form").reset();
+            document.getElementById("lead-panel").style.display = "none";
+            document.getElementById("form-message").style.display = "none";
+            showStep(1);
+        }
+
+        renderSingle("type-options", "type", "type");
+        renderSingle("stage-options", "stage", "stage");
+        renderSingle("scope-options", "scope", "scope");
+        renderSingle("timeline-options", "timeline", "timeline");
+        renderAddons();
+        renderFit();
+
+        document.addEventListener("click", (event) => {
+            const option = event.target.closest(".option[data-key]");
+            const check = event.target.closest(".check-option");
+            const fit = event.target.closest(".option[data-fit]");
+
+            if (option) {
+                const key = option.dataset.key;
+                state[key] = option.dataset.id;
+                option.parentElement.querySelectorAll(".option").forEach((node) => node.classList.remove("selected"));
+                option.classList.add("selected");
+            }
+
+            if (check) {
+                const id = check.dataset.id;
+                if (state.addons.includes(id)) {
+                    state.addons = state.addons.filter((addonId) => addonId !== id);
+                    check.classList.remove("selected");
+                } else {
+                    state.addons.push(id);
+                    check.classList.add("selected");
+                }
+            }
+
+            if (fit) chooseFit(fit.dataset.fit, fit);
+        });
+
+        document.querySelectorAll("[data-next]").forEach((button) => {
+            button.addEventListener("click", () => {
+                if (!requireCurrentAnswer()) return;
+                showStep(state.step + 1);
+            });
+        });
+
+        document.querySelectorAll("[data-prev]").forEach((button) => {
+            button.addEventListener("click", () => showStep(state.step - 1));
+        });
+
+        document.getElementById("show-result").addEventListener("click", displayResult);
+        document.getElementById("restart").addEventListener("click", restart);
+
+        document.getElementById("estimate-form").addEventListener("submit", (event) => {
+            event.preventDefault();
+            if (!state.fit) {
+                alert("Please tell us how the estimate compares with what you had in mind.");
+                return;
+            }
+
+            updateHiddenFields();
+
+            const form = event.currentTarget;
+            const button = document.getElementById("estimate-submit");
+            const status = document.getElementById("form-message");
+            const originalText = button.textContent;
+
+            button.disabled = true;
+            button.textContent = "Sending...";
+            status.style.display = "none";
+
+            if (!window.emailjs) {
+                status.textContent = "The estimate is ready, but EmailJS did not load. Connect the lead form before publishing submissions.";
+                status.style.display = "block";
+                button.disabled = false;
+                button.textContent = originalText;
+                return;
+            }
+
+            emailjs
+                .sendForm(SERVICE_ID, TEMPLATE_ID, form)
+                .then(function (result) {
+                    console.log("Estimator EmailJS success:", result);
+                    status.textContent = "Sent. PRIZIX will review your estimate and follow up.";
+                    status.style.display = "block";
+                    form.reset();
+                })
+                .catch(function (error) {
+                    console.error("Estimator EmailJS error:", error);
+                    status.textContent = "Not sent. Please try again or use the contact form on the homepage.";
+                    status.style.display = "block";
+                    if (error && error.text) console.error("EmailJS error.text:", error.text);
+                })
+                .finally(function () {
+                    button.disabled = false;
+                    button.textContent = originalText;
+                });
+        });
+    </script>
+</body>
+
+</html>
