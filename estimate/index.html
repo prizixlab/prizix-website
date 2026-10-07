@@ -273,6 +273,20 @@
             padding: 28px;
         }
 
+        .estimator-note {
+            padding: 28px;
+            margin-bottom: 28px;
+        }
+
+        .estimator-note p {
+            color: var(--muted);
+            line-height: 1.62;
+        }
+
+        .estimator-note p:last-child {
+            margin-bottom: 0;
+        }
+
         .hero-panel ul {
             display: grid;
             gap: 12px;
@@ -668,6 +682,12 @@
 
     <main class="section" id="estimator">
         <div class="container">
+            <aside class="card estimator-note" aria-labelledby="estimator-note-title">
+                <h3 id="estimator-note-title">A quick note before you start</h3>
+                <p>This estimator is designed to help you think through your project scope, priorities, and likely level of investment.</p>
+                <p>The result is only a rough planning range — not a quote or final price. Actual cost can vary significantly based on design requirements, content, integrations, migration complexity, existing systems, and other project details.</p>
+                <p>Think of it as a starting point to help you understand what may be involved before deciding what makes sense for your business.</p>
+            </aside>
             <section class="estimate-shell" aria-label="PRIZIX project estimator">
                 <div class="progress" aria-hidden="true"><div class="progress-bar" id="progress-bar"></div></div>
                 <div class="estimator-content">
@@ -733,6 +753,7 @@
                                 <h2 id="result-title">Your project estimate</h2>
                                 <p class="sub" id="result-summary"></p>
                                 <div class="estimate-price" id="price-range">$3,000 – $6,500</div>
+                                <p class="note"><strong>This is a preliminary planning range, not a final quote.</strong></p>
                                 <div class="meta-grid">
                                     <div><span class="note">Typical timeline</span><strong id="time-range">4–8 weeks</strong></div>
                                     <div><span class="note">Complexity</span><strong id="complexity">Moderate</strong></div>
